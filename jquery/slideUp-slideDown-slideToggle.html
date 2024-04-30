@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slideUp slideDown slideToggle</title>
+    <script src="jquery.min.js"></script>
+    <style>
+        .ab{
+            height: 100px;
+            width: 100px;
+            background: red;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn1">Slide Up</button>
+    <button id="btn2">Slide Down</button>
+    <button id="btn3">Slide Toggle</button>
+    <div class="ab" id="ab"></div>
+    <script>
+        $(document).ready(function(){
+            $('#btn1').click(function(){
+                $('#ab').slideUp();
+            })
+            $('#btn2').click(function(){
+                $('#ab').slideDown();
+            })
+            $('#btn3').click(function(){
+                $('#ab').slideToggle();
+            })
+        })
+
+    </script>
+</body>
+</html>

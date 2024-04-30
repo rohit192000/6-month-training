@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/css/bootstrap.min.css">
+    <script src="styles/js/jquery.js"></script>
+    <script src="styles/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="styles/extra.css">
+
+</head>
+<body>
+
+
+
+<!-- A B C D E F G H I J K L M N O P Q R S T Y U V W X Y Z -->
+
+	<div class="col-lg-12">
+	
+	<br>
+	<div class="col-xs-12">
+	
+		<div class="col-xs-1">
+			<button onclick="makesort()" class="btn btn-default btn-lg"><span id="bt" class="glyphicon glyphicon-sort-by-alphabet"></span></button>
+		</div>
+		<div class="col-xs-4">
+			<label>Sort By Alphabets</label>
+		<select id="alpha" class="form-control" onchange="concatAll(this.value)">
+			<option value="">Sort By -</option>
+			<optgroup label="Alphabets" id="newlist"></optgroup>
+		</select>
+	
+	</div>
+	
+	<div class="col-xs-12">
+	
+	<script type="text/javascript">
+		
+		var alpha = "A B C D E F G H I J K L M N O P Q R S T Y U V W X Y Z";
+
+		var arrr = alpha.split(" ");
+
+		// console.log(arrr);
+		var ls1 = ''
+		for (var i = 0; i < arrr.length; i++) {
+			var list = "<option>"+arrr[i]+"</option>";
+			ls1 += list;
+		}
+
+		document.getElementById('newlist').innerHTML = ls1;
+
+
+	</script>
+
+
+
+
+
+		<div id="concat"></div>
+	</div>
+
+	<div class="col-xs-6">
+
+		<h4>Array 1</h4>
+
+	<input type="text" id="name" placeholder="Name of Fruit" class="form-control">
+	<br>
+	<button class="btn btn-info" onclick="Add()">Add</button>
+	<button class="btn btn-danger" onclick="Remove()">Remove Last</button>
+	<button class="btn btn-danger" onclick="RemoveF()">Remove First</button>
+	<br><br>
+
+	<div id="print">
+	</div>
+
+	</div>
+
+	<div class="col-xs-6">
+
+		<h4>Array 2</h4>
+
+	<input type="text" id="vegname" placeholder="Name of Vegitables" class="form-control">
+	<br>
+	<button class="btn btn-primary" onclick="Addto()">Add</button>
+	<button class="btn btn-danger" onclick="Removeto()">Remove Last</button>
+	<button class="btn btn-danger" onclick="RemoveFto()">Remove First</button>
+	<br><br>
+
+	<div id="print2">
+	</div>
+
+	</div>
+
+	<!-- Apple , Bananam , apple -->
+
+
+
+
+
+
+
+
+	<script type="text/javascript">
+		
+		var ar  = ['apple','mango','orange','banana','grapee'];
+
+		var ar2  = ['caret'];
+
+		console.log(ar)
+
+		console.log(ar2)
+
+		var Showsort = true;
+
+
+		// "glyphicon glyphicon-sort-by-alphabet"
+
+
+		function makesort(){
+			if (Showsort == true) {
+				Showsort = false;
+				document.getElementById('bt').classList.remove('glyphicon-sort-by-alphabet');
+				document.getElementById('bt').classList.add('glyphicon-sort-by-alphabet-alt');
+			}else{
+				Showsort = true;
+				document.getElementById('bt').classList.remove('glyphicon-sort-by-alphabet-alt');
+				document.getElementById('bt').classList.add('glyphicon-sort-by-alphabet');
+			}
+			concatAll()
+		}
+
+		function checkmylist(x){
+			var a = document.getElementById('alpha').value.toLowerCase();
+			// alert(x);
+			// console.log(x.charAt(0) == a);
+			return x.charAt(0) == a;
+		}
+
+
+		function concatAll(x){
+
+			var ar3 = ar.concat(ar2);
+
+			if (Showsort == true) {
+				ar3.sort();
+			}else{
+				ar3.sort();
+				ar3.reverse();
+			}
+
+			if(x){
+				var ar3 = ar3.filter(checkmylist)
+			}
+
+			console.log(ar3)
+
+			var list = '';
+
+			var l0 = "<ol class='pagination'>";
+			var l2 = "</ol>";
+
+			list += l0;
+			for (var i = 0; i < ar3.length; i++) {
+				var l1 = "<li><a href=''>"+ar3[i]+"</a></li>";
+				list += l1;
+			}
+			list += l2;
+
+			document.getElementById('concat').innerHTML = list;
+		}
+
+		concatAll();
+
+
+		function Add(){
+			var a = document.getElementById('name').value.toLowerCase();
+			if (ar.indexOf(a)) {
+				console.log('yes'+ar.indexOf(a));
+				ar.push(a);
+				fruitArray();
+				concatAll();
+			}else{
+				// console.log('no'+ar.indexOf(a));
+				alert('This Product is already inserted');
+			}
+		}
+
+		function Remove(){
+			ar.pop();
+			fruitArray();
+			concatAll();
+		}
+
+		function RemoveF(){
+			ar.shift();
+			fruitArray();
+			concatAll();
+		}
+
+
+		function Addto(){
+			var a = document.getElementById('vegname').value.toLowerCase();
+			ar2.push(a);
+			VegArray();
+			concatAll();
+		}
+
+		function Removeto(){
+			ar2.pop();
+			VegArray();
+			concatAll();
+		}
+
+		function RemoveFto(){
+			ar2.shift();
+			VegArray();
+			concatAll();
+		}
+
+		function fruitArray(){
+
+			var list = '';
+
+			var l0 = "<ol class='list-group'>";
+			var l2 = "</ol>";
+
+			list += l0;
+			for (var i = 0; i < ar.length; i++) {
+				var l1 = "<li class='list-group-item'> <button id='"+i+"' onclick='del(this.id)' class='btn close'><span class='glyphicon glyphicon-trash'></span></button>"+ar[i]+"</li>";
+				list += l1;
+			}
+			list += l2;
+
+			document.getElementById('print').innerHTML = list;
+
+		}
+
+		fruitArray();
+
+		function del(x){
+			// alert(x);
+			ar.splice(x, 1);
+			console.log(x);
+			fruitArray();
+			concatAll();
+		}
+
+
+		// console.log(ar);
+
+
+
+
+
+		function VegArray(){
+
+			var list = '';
+
+			var l0 = "<ol class='list-group'>";
+			var l2 = "</ol>";
+
+			list += l0;
+			for (var i = 0; i < ar2.length; i++) {
+				var l1 = "<li class='list-group-item'> <button id='"+i+"' onclick='dell(this.id)' class='btn close'><span class='glyphicon glyphicon-trash'></span></button>"+ar2[i]+"</li>";
+				list += l1;
+			}
+			list += l2;
+
+			document.getElementById('print2').innerHTML = list;
+
+		}
+
+		function dell(x){
+			// alert(x);
+			ar2.splice(x, 1);
+			VegArray();
+			concatAll();
+		}
+
+		VegArray();
+
+
+
+
+	</script>
+
+
+
+
+
+
+
+</body>
+</html>

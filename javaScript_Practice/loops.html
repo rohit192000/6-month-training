@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condition and Loop</title>
+
+    <div class="triangle"></div>
+</head>
+<body>
+    <div>
+    <form action="#">
+        <input type="text" id="print" ">
+        <input type="submit"  onclick="check()">
+    </form>
+    </div>
+    <div>Odd and Even element checker</div><br>
+    <div id="prints"></div>
+    <script>
+            var ar = [{Name: "Naveen", Class: 5, RollNo:21}, {Name: "Raju", Class: 6, RollNo: 43}];
+            // console.log(ar[0].Name);
+            // document.write(ar[0].Name);
+            // document.write('<br>');
+
+            // document.write(ar[0].Class);
+            // document.write('<br>');
+
+            // document.write(ar[0].RollNo);
+
+            // = assign value
+            // == value martching
+            // === value and data type matching
+
+
+            // document.write("<br><h3>if else</h3");
+
+            function check(){
+                var i = document.getElementById('print').value;
+                if (i%2 == 0){
+                    console.log(i);
+                    document.getElementById('prints').innerHTML = "<p>Yes, It is even number."
+                }else{
+                    console.log(i);
+                    document.getElementById('prints').innerHTML = "<p>No, It is odd number."
+
+                }
+
+            }
+
+
+
+            function triangle(){
+                let a = '';
+                for(i=0; i<=10; i++){
+                    for(j=0; j<i; j++){
+                    if(i <= 10){
+                        a += '*';
+                        a += '^';
+                        console.log('2');
+                        for(k=0; k<j; k++){
+                            if(i <= 0){
+                            a += '*';
+                            // console.log('2');
+                            console.log(a);
+                            // console.log('2');
+                        // console.log(a);
+                        // document.write(a);
+                        }
+                        console.log('1');
+                        }
+                        // console.log(a);
+                        // document.write(a);
+                    }
+                    }
+                    // console.log('<br>');
+                    // document.write(a);
+                    a += '<br>';
+                }
+                // a += '<br>';
+                // document.write('<br>')
+                // a += '<br>';
+                // console.log(a);
+                document.write(a);
+                }
+            
+            // triangle();
+        
+            
+            var a = 1.0;
+            var b = 'b';
+            console.log(b);
+            console.log(parseFloat(a));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+    
+    
+</body>
+</html>

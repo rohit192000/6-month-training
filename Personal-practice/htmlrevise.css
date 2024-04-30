@@ -1,0 +1,21 @@
+body,html{
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+}
+/* navbar background*/
+.navbar{
+    width: 100%;
+    background-color: whitesmoke;
+    height: 10vh;
+}
+.nav{
+    font-size: 28px;
+    /* font-style: bolder; */
+    font-weight: bolder;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* display: inline-block; */
+}
+.navbar-nav{
+    background: rgb(238, 235, 235);
+}

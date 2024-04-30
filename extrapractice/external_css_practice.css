@@ -1,0 +1,11 @@
+.ab{
+    height: 100px;
+    width: 100px;
+    background: rgb(236, 73, 73);
+    transition: 5s linear;
+}
+
+.ab:hover{
+    background: cyan;
+    transform: rotate(360deg);
+}

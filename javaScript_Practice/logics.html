@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window Function, Logics</title>
+    <link rel="stylesheet" href="styles/css/bootstrap.min.css">
+    <script src="styles/js/jquery.js"></script>
+    <script src="styles/js/bootstrap.min.js"></script>
+    <style>
+        /* .logout{
+            display: none;
+        } */
+    </style>
+</head>
+<body>
+    <p id="user-log" class="pull-right btn">Welcome<span id="user-name"></span></p>
+    <button data-toggle="modal" data-target="#mymodal" class="btn btn-success pull-right">Login</button>
+    <button id="logout" class="btn btn-danger pull-right" onclick="logout()">Logout</button>
+    
+    <script>
+        function logout(){
+            localStorage.removeItem('userid');
+            location.reload();
+        }
+    </script>
+
+    <div class="modal fade" id="mymodal" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content col-lg-12">
+                <div class="modal-header">
+                    <button class="close" data-dismiss="modal">X</button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div>
+                            <div class="form-group">
+                                <input type="email" class="form-control input-lg" id="email" placeholder="Email">
+                            </div>
+                            <div class="form-group"> 
+                                <input class="form-control input-lg" id="password" placeholder="Password">
+                            </div>
+                            <div class="form-group">
+                                <button class="btn btn-success btn-sm" onClick="login()">Login</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        var users = [{Name : 'Naveen', Email : 'naveen@gmail.com', Password : '123456'},
+         {Name : 'Raju', Email : 'raju@gmail.com', Password : '123456'}, 
+         {Name : 'Ravi', Email : 'ravi@gmail.com', Password : '123456'}];
+
+        var uid = localStorage.getItem('userId');
+        console.log(uid);
+
+    </script>
+    <script>
+        function login(){
+            var email = document.getElementById('email');
+            var password = document.getElementById('password');
+
+            if(email.value == ''){
+                alert('Please fill email');
+                email.focus();
+            }else if(password.value == ''){
+                alert('Please fill password');
+                password.focus();                
+            }else{
+                for(var i = 0; i < users.length; i++){
+                    if(email.value == users[i].Email && password.value == users[i].Password){
+                        alert('Login Successful');
+                        window.location.href='logics.html';
+                        break;
+                    }
+                    if(users.length == (i+1)){
+                        alert('Wrong Id or Password');
+                    }
+                }
+            }
+        }
+
+        if(uid){
+	    	document.getElementById('logout').style.display = 'block';
+	    	document.getElementById('login').style.display = 'none';
+	    	document.getElementById('user-log').style.display = 'block';
+	    	document.getElementById('user-name').innerHTML = uid;
+	    }else{
+	    	document.getElementById('logout').style.display = 'none';
+	    	document.getElementById('login').style.display = 'block';
+	    	document.getElementById('user-log').style.display = 'none';
+	}
+    </script>
+
+</body>
+</html>

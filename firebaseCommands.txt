@@ -1,0 +1,100 @@
+==>Insert auto gen document
+
+firebase.firestore().collection().add({
+	field1:val1,
+	field2:val2
+})
+
+==>Insert user gen document
+
+firebase.firestore().collection().doc(x).set({
+	field1:val1,
+	field2:val2
+})
+where x can be any id
+
+==>Fetch data run time
+
+firebase.firestore.collection().get().then((succ) => {
+	if(succ.size == 0){
+		// no data found
+	}else{
+		// data found (json)
+	}
+})
+
+get have to be refreshed
+
+==>Fetch data real time
+
+firebase.firestore.collection().onSnapshot((succ) => {
+	if(succ.size == 0){
+		// no data found
+	}else{
+		// data found (json)
+	}
+})
+it automatically refreshed
+
+
+
+==>Condition fetch data
+
+firebase.firestore.collection().doc(964205).onSnapshot((succ) => {
+	if(succ.exist){
+		//succ.id
+		//succ.data().Name
+	}else{
+		//no data found
+	}
+
+
+})
+in this only one data have to be fetched
+
+
+
+
+firebase.firestore.collection().where('Email','==', 'rohitsamal2000@gmail.com').onSnapshot((succ) => {
+	if(succ.size == 0){
+		//succ.id
+		//succ.data().Name
+	}else{
+		//no data found
+	}
+
+
+})
+In this multiple data can be fetched
+
+
+//asc
+//desc
+
+firebase.firestore.collection().orderBy('Email','asc').onSnapshot((succ) => {
+	if(succ.size == 0){
+		//succ.id
+		//succ.data().Name
+	}else{
+		//no data found
+	}
+
+
+})
+
+
+firebase.firestore.collection().limit(2).onSnapshot((succ) => {
+	if(succ.size == 0){
+		//succ.id
+		//succ.data().Name
+	}else{
+		//no data found
+	}
+
+
+})
+
+
+
+
+

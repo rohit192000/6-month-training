@@ -1,0 +1,117 @@
+body{
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    background:radial-gradient(at bottom,rgb(158, 248, 158),rgb(177, 247, 206), rgb(150, 218, 178),rgb(140, 248, 146),rgb(193, 248, 211));
+    /* radial-gradient(at top, rgb(255, 211, 210) 10%,transparent 40%) */
+    height: 100vh;
+}
+
+.marg-0{
+    margin: 0px;
+}
+.pad-0{
+    padding: 0px;
+}
+.crsive{
+    font-family: cursive;
+}
+.main-box{
+    padding: 20px;
+}
+.header-box{
+  height: 50px;
+}
+.box{
+    padding: 80px;
+    box-shadow: 0px 0px 120px -13px inset rgb(42, 238, 42);
+    border-radius: 10px;
+    height: max-content;
+}
+.header-txt{
+    padding-top: 25px;
+    padding-left: 50px;
+    line-height: 50px;
+    width: 100%;
+}
+#sp-hd-1{
+    font-size: 68px;
+}
+#sp-hd-2{
+    font-size: 68px;    
+}
+#sp-hd-3{
+    font-size: 24px;
+    line-height: 10px;
+    
+}
+.glyphicon-heart{
+    color: red;
+}
+.control-label{
+    font-size: 24px;
+}
+div.nd-sec{
+    padding-right: 70px;
+}
+.li-1{
+    justify-content: left;
+    
+}
+ul.pager{
+    margin: 0;
+    padding-top:100px;
+}
+.pager>li>a.li-a{
+    margin-bottom: 10px;
+    background-color: transparent;
+    border: 0px;
+    display: block;
+    color: black;
+    font-size: larger;
+    font-weight: bolder; 
+               
+}
+.pager>li>a.li-a:hover{
+    background-color: rgb(255, 255, 255);
+}
+.li-icn{
+    align-items: left;
+}
+.glyphicon-cd{
+    animation:  rot 3s linear 0s infinite;
+}
+.pager>li>a>span.glyphicon-cd:before{
+    color: rgb(0, 0, 0);
+    
+}
+
+.box-img{
+    background: linear-gradient(330deg, rgb(203, 248, 182) 30%, transparent 60%);    
+    border-right:2px;
+    border-bottom:2px;
+    /* height: 300px; */
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    max-height: 100%;
+    padding-bottom: 20px;
+}
+.img-responsive{
+    width: 100%;
+    background: none;
+    border: 0px;
+    padding-top: 70px;
+    padding-right: 20px;
+    
+
+}
+
+@keyframes rot{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+#prd{
+    padding-right: 15px;
+}

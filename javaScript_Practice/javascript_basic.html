@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Basic</title>
+</head>
+<body>
+    <div class="print" id="print"></div>
+
+    <script type="text/javascript">
+
+        //es5
+        var a = "<h1>Rohit<br>Samal";
+        var l = 10;
+
+        //es6 and es7
+        let b = "Rohit";
+        const c = "Nishant";
+        const m = 10;
+        const n = 10;
+
+        var d = b + c;
+        var e = b + " Samal";
+        var f = m + n;
+
+        //es5 es6 es7
+        const v = a
+        
+        // document.write(v);
+        // console.log(a);
+        // document.getElementById('print').innerHtml = 'm';
+        
+        console.log(l);
+        document.getElementById('print').innerHTML = l;
+
+            alert(a);
+
+            // Data Types
+
+            var name = "Rohit"; // String
+            var clas = 23; //int
+            var marks = 89.08; // floart
+            var status = true; // boolean
+            var subject = ["Math", "Eng", "Physics"] //array
+            var obj = {Math:'geeta', Eng : "rajpreet", physics: 'Seema mam'}; //Object
+
+            // document.getElementById('print').innerHTML = subject[0];
+            // document.getElementById('print').innerHTML = obj.physics;
+
+            var k = [{Math:'geeta', Eng : "rajpreet", physics: 'Seema mam'}, {Math:'geeta', Eng : "rajpreet", physics: 'Seema mam'}, {Math:'seeta', Eng : "rajpreet", physics: 'Seema mam'}];
+            document.getElementById('print').innerHTML = k[0].Math;
+            document.getElementById('print').innerHTML = k[1].Math;
+            document.getElementById('print').innerHTML = k[2].Math;
+
+
+            
+    </script>
+</body>
+</html>

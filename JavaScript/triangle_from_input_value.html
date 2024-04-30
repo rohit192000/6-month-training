@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="number" name="triangle" id="triangle" onkeyup="getdata(this.value)"> <br>
+    <div id="rt"></div>
+
+
+    <Script type="text/javascript">
+            // for (var i = 0; i < 10; i++){
+            //     // document.getElementById('rt').innerHTML = "*";
+            //     document.write('*');
+            // }
+            // for (var i = 0; i < 10; i++){
+            //     for(var j = 0; j < i; j++){
+            //         document.getElementById('rt').innerHTML = document.write("i");
+            //         console.log(j)
+            //     }
+                
+            //     // console.log(x);
+            //     // console.log("*");
+            //     // document.write('*');
+            // }
+            function getdata(x){
+                var gl = '';
+                for (var i = 0; i < parseInt(x); i++){
+                    for(var j = 0; j < i; j++){
+                        gl += '*';
+                    }
+                    gl += '<br>';
+                }
+                document.getElementById('rt').innerHTML = gl;
+            }
+
+            // function getdata(x){
+        //         for (var i = 0; i < x; i++){
+        //         for(var j = 0; j < i; j++){
+        //             document.getElementById('rt').innerHTML = document.write("i");
+        //             console.log(j);
+        //         }
+                
+        //         // console.log(x);
+        //         // console.log("*");
+        //         // document.write('*');
+        //     }
+        //     // document.write("next loop")
+        // }
+        // function getdata(x){
+        //     for (var i = 0; i < x; i++){
+        //         console.log(x);
+                
+        //         // console.log(x);
+        //         // console.log("*");
+        //         // document.write('*');
+        //     }
+        
+            // for(i = 0; i < x; i++){
+            //     for(j = 0; j < (10 - i); j++) {
+            //         document.getElementById('rt').innerHTML = "<b>*</b>";
+            //     }
+            //     for(k = 0; k < i; k++){
+            //         document.getElementById.innerHTML = "*";
+            //     }
+            //     document.getElementById('tr').innerHTML= "<h1>head<h2>";
+
+            // }
+            // for(i = 0; i<x; i++){
+            // for(j = 0; j < (10 - i); j++) {
+            //     document.write("&nbsp;")
+            // }
+            // for(k = 0; k < i; k++){
+            //     document.write("*");
+            // }
+            // document.write("<br>");
+
+            // }
+            // const z = x;
+            // const y = "1";
+            // const b = "2"
+            // console.log(z)
+            // console.log(y)
+            // console.log(b)
+            // for (var i = 0; i < 10; i++){
+            //     document.getElementById('rt').innerHTML = "*";
+            // }
+        //     for (var i=0; i<z; i++){                                                              
+        //     if(i%2 == 1){
+        //         for(j = 0; j < i; j++){
+        //         document.getElementById("rt").innerHTML = "<h1>head</h1>";
+        //         // document.write(j)
+        //       }
+        //     }
+ 
+        //     document.getElementById("rt").innerHTML = "<h2>free</h2>";
+        //     // document.write("next loop")
+        // }
+        // }
+
+
+            // for(i = 0; i<10; i++){
+            // for(j = 0; j < (10 - i); j++) {
+            //     document.write("&nbsp;")
+            // }
+            // for(k = 0; k < i; k++){
+            //     document.write("*");
+            // }
+            // document.write("<br>");
+
+            // }
+        
+    </Script>
+</body>
+</html>

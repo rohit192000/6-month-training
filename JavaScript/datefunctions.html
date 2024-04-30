@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script type="text/javascript">
+       var d = new Date();
+       document.write(d);
+       document.write('<br>');
+       console.log(d.toString());
+       console.log(d.toUTCString());
+       console.log(d.toDateString());
+       console.log(d.toISOString());
+
+       document.write(d.getFullYear());      
+        document.write('<br>');
+       document.write(d.getMonth());       
+       document.write('<br>');
+       document.write(d.getDate());      
+        document.write('<br>');
+       document.write(d.getHours());       
+       document.write('<br>');
+       document.write(d.getMinutes());      
+        document.write('<br>');
+       document.write(d.getSeconds());      
+        document.write('<br>');
+       document.write(d.getMilliseconds());      
+         document.write('<br>');
+       document.write(d.getTime());      
+        document.write('<br>');
+       document.write(d.getDay());      
+        document.write('<br>');
+       document.write(d.getFullYear());      
+        document.write('<br>');
+
+
+    d.setDate(5)
+    console.log(d);
+    console.log(d);
+    d.setFullYear(2015);
+    console.log(d);
+    d.setHours(20)
+    console.log(d);
+    d.setMinutes(30)
+    console.log(d);
+    d.setMonth(11)
+    console.log(d);
+    d.setMilliseconds(30)
+    console.log(d);
+    d.setSeconds(14)
+    console.log(d);
+    d.setTime(24)
+    console.log(d);
+
+
+
+
+
+    document.write('<h1>Math Function</h1>')
+    console.log(Math.E); //returns euler number
+    console.log(Math.PI);   //returns PI
+    console.log(Math.SQRT2); //returns the square root of 2
+    console.log(Math.SQRT1_2); //returns the square root of 1/2
+    console.log(Math.LN2);  //returns the natural logarithm of 2
+    console.log(Math.LN10);  //returns the nartural logarithm of 10
+    console.log(Math.LOG2E); // returns base 2 logarithm of E
+
+
+    var x = 4.4;
+    
+    console.log(Math.round(x)); //Returns x rounded to its nearest integer
+    console.log(Math.ceil(x)); //Returns x rounded to its nearest integer
+    console.log(Math.floor(x)); //Returns x rounded down to its nearest integer
+    console.log(Math.trunc(x)); //Returns the integer part of x (new in ES6)
+
+    var y = 7.2;
+
+    console.log(Math.round(x)); //Returns x rounded to its nearest integer
+    console.log(Math.ceil(x)); //Returns x rounded to its nearest integer
+    console.log(Math.floor(x)); //Returns x rounded down to its nearest integer
+    console.log(Math.trunc(x)); //Returns the integer part of x (new in ES6)
+
+
+    console.log(Math.random()); //Returns the random no.
+
+    console.log(Math.floor(Math.random()*1000000)); //0 - 1000000
+
+
+    var max = 999999;
+    var min = 1000000;
+    console.log(Math.floor(Math.random() * (max - min + 1)) + min);
+
+
+    var text="Hello World";
+
+    var letter = text.charAt(0);
+    console.log(letter);
+
+    var code = text.charCodeAt(1);
+    console.log(code);
+    
+
+
+   </script> 
+</body>
+</html>

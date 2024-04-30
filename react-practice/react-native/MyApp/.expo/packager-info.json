@@ -1,0 +1,10 @@
+{
+  "devToolsPort": 19002,
+  "expoServerPort": null,
+  "packagerPort": 19000,
+  "expoServerNgrokUrl": "https://hg-xr4.anonymous.myapp.exp.direct",
+  "packagerNgrokUrl": "https://hg-xr4.anonymous.myapp.exp.direct",
+  "ngrokPid": 17924,
+  "packagerPid": null,
+  "webpackServerPort": null
+}

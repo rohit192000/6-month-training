@@ -1,0 +1,34 @@
+Session Structure
+
+// Start
+localstorage.setItem('Key','Value');
+
+// stable
+localstorage.getItem('Key');
+//end
+localstorage.removeItem('Key');
+
+function checkLogin(){
+	var a = localstorage.getItem('UserName');
+	if(a) {
+		document.getElementById('login').dispaly= 'none';
+		document.getElementById('login').dispaly= 'block';
+	}else{
+		document.getElementById('login').dispaly= 'block';
+		document.getElementById('login').dispaly= 'none';
+	}
+}	
+
+function login(){
+	var a = document.getElelmentById().value;
+	localStorage.setItem('UserName',a);
+	checkLogin();
+}
+
+function Logout(){
+	localStorage.removeItem('UserName');
+	checkLogin();
+}
+
+Try to print name at the time of session running.
+	

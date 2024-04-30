@@ -1,0 +1,88 @@
+.container-fluid{
+    padding: 0px;
+    margin: 0px;
+}
+.nv{
+    background: linear-gradient(to, rgb(255, 186, 59), black);
+    margin-bottom: 0px;
+}
+.navbar-brand>img{
+    position: absolute;
+    height: inherit;
+}
+.nv{
+    border-radius: 0px;
+    margin-bottom: 0px;
+}
+.left-nav-a{
+    color: rgb(1, 2, 0);
+}
+.nav>li>a.left-nav-a:hover{
+    background-color: rgb(250, 197, 99);
+    color:rgb(1, 2, 0);
+}
+
+.right-nav-a{
+    color: white;
+}
+.nav>li>a.right-nav-a:hover{
+    color: rgb(1, 2, 0);
+}
+.nav>li.consultant{
+    position: inherit;
+}
+.nav>li>a.get{
+    position: inherit;
+}
+.section-2{
+    height: 700px;
+    background-image: linear-gradient(to right, rgb(1,1,1,.5), rgb(1,1,1,.6)), url("../images/office-front-desk.png");
+    background-size: cover;
+    background-position: inherit;
+    background-repeat: no-repeat;
+    opacity: 2;
+}
+div.desk-logo{
+    height: 700px;
+    background: url("../images/office-front-desk.png");
+    background-size: contain;
+    background-position: center;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+}
+.txt{
+    height: 500px;
+    position: absolute;
+    top: 272px;
+    left: 270px;
+}
+.txtt{
+    font-size: 22px;
+    color: white;
+    font-weight: bold;
+}
+.desk-logo .txt .line{
+    background-color: red; 
+    height: 2px; 
+    width: 330px;
+}
+.txt> button{
+    width: 80px;
+    
+}
+.txt>.learn{
+    font-size: 10px;
+}
+@media (min-width: 550px){
+    nav.navbar.nv {
+        background: linear-gradient(to bottom, rgb(255, 186, 59) , rgb(22, 21, 21));
+    }
+}
+
+@media (min-width: 768px){
+    nav.navbar.nv {
+        background: linear-gradient(to right, rgb(255, 186, 59) 50%, black);
+    }
+}
+
+

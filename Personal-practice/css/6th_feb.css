@@ -1,0 +1,26 @@
+div{
+    height: 100px;
+    margin: 20px 0px 40px 0px;
+
+    border: 2px solid blueviolet;
+    /* margin: 0; */
+}
+.ab{
+    background: red;
+}
+.ac{
+    background: green;
+}
+.ad{
+    background: teal;
+}
+.ae{
+    background: pink;
+}
+.af{
+    background: grey;
+}
+.ag{
+    background: salmon;
+    
+}

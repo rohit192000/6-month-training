@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/css/bootstrap.min.css">
+    <script src="styles/js/jquery.js"></script>
+    <script src="styles/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="styles/10th_feb.css">
+    <title>function</title>
+</head>
+<body class="pad marg">
+    <div class="row col-lg-12 pad marg">
+    <div class="form-group col-lg-2">
+        <form action="">
+            <div class="form-group">
+                <label for="">Name</label>
+            <input class="form-control" type="text" id="name" onchange="getdata_name(this.value)">
+            <p id="print-name"></p>
+            </div>
+            <div class="form-group">
+            <label for="email">Email</label>
+            <input class="form-control" type="email" id="email" onchange="getdata_email(this.value)">
+            <p id="print-email"></p>
+            </div>
+            <div class="form-group">
+            <label for="pass">Password</label>
+            <input class="form-control" type="password" id="" onchange="getdata_pass(this.value)">
+            <p id="print-pass"></p>
+            </div>
+            <div class="form-group">
+            <label for="telephone">Contact</label>
+            <input class="form-control" type="tel" id="telephone" onchange="getdata_tel(this.value)">
+            <p id="print-tel"></p>
+            </div>
+            <div class="form-group">
+            <button class="form-control btn btn-info bttn" type="submit" id = "btn" >Click</button>
+            </div>
+        </form>
+    </div>
+    </div>
+    <script type="text/javascript">
+        document.getElementById('btn').disabled = true;
+        function getdata_name(x){
+
+            if (x == ''){
+                document.getElementById('print-name').innerHTML = 'Field Empty';
+                document.getElementById('print-name').style.color = 'red';
+                // document.getElementById('btn').disabled = true;
+            }else{
+                document.getElementById('print-name').innerHTML = 'ok';
+                document.getElementById('print-name').style.color = 'green';
+                // document.getElementById('btn').disabled = false;
+                a = document.getElementById('print-name').innerHTML
+                b = document.getElementById('print-email').innerHTML
+                c = document.getElementById('print-pass').innerHTML
+                d = document.getElementById('print-tel').innerHTML
+                if(a == b && b == c && c == d && d == 'ok'){
+                    document.getElementById('btn').disabled = false;
+                }else{
+                    document.getElementById('btn').disabled = true;
+                } 
+            
+                }
+        }
+        function getdata_email(x){
+            if (x == ''){
+                document.getElementById('print-email').innerHTML = 'Field Empty';
+                document.getElementById('print-email').style.color = 'red';
+                // document.getElementById('btn').disabled = true;
+            }else{
+                document.getElementById('print-email').innerHTML = 'ok';
+                document.getElementById('print-email').style.color = 'green';
+            }
+            a = document.getElementById('print-name').innerHTML
+                b = document.getElementById('print-email').innerHTML
+                c = document.getElementById('print-pass').innerHTML
+                d = document.getElementById('print-tel').innerHTML
+                if(a == b && b == c && c == d && d == 'ok'){
+                    document.getElementById('btn').disabled = false;
+                }else{
+                    document.getElementById('btn').disabled = true;
+                } 
+            
+            // a = console.log(document.getElementById('print-name').innerHTML)
+            // b = console.log(document.getElementById('print-email').innerHTML)
+            // c = console.log(document.getElementById('print-pass').innerHTML)
+            // d = console.log(document.getElementById('print-tel').innerHTML)
+            // if(a === b){
+            //     document.getElementById('btn').disabled = false;
+            // }else{
+            //     document.getElementById('btn').disabled = true;
+            // } 
+        
+        }
+
+        function getdata_pass(x){
+            if (x == ''){
+                document.getElementById('print-pass').innerHTML = 'Field Empty';
+                document.getElementById('print-pass').style.color = 'red';
+                // document.getElementById('btn').disabled = true;
+            }else{
+                document.getElementById('print-pass').innerHTML = 'ok';
+                document.getElementById('print-pass').style.color = 'green';
+            }
+                a = document.getElementById('print-name').innerHTML
+                b = document.getElementById('print-email').innerHTML
+                c = document.getElementById('print-pass').innerHTML
+                d = document.getElementById('print-tel').innerHTML
+                if(a == b && b == c && c == d && d == 'ok'){
+                    document.getElementById('btn').disabled = false;
+                }else{
+                    document.getElementById('btn').disabled = true;
+                } 
+        }
+
+        function getdata_tel(x){
+
+            if (x == ''){
+                document.getElementById('print-tel').innerHTML = 'Field Empty';
+                document.getElementById('print-tel').style.color = 'red';
+                // document.getElementById('btn').disabled = true;
+            }else{
+                document.getElementById('print-tel').innerHTML = 'ok';
+                document.getElementById('print-tel').style.color = 'green';
+            }
+                a = document.getElementById('print-name').innerHTML
+                b = document.getElementById('print-email').innerHTML
+                c = document.getElementById('print-pass').innerHTML
+                d = document.getElementById('print-tel').innerHTML
+                if(a == b && b == c && c == d && d == 'ok'){
+                    document.getElementById('btn').disabled = false;
+                }else{
+                    document.getElementById('btn').disabled = true;
+                } 
+            // if(d == 'ok'){
+            //     document.getElementById('btn').disabled = true;
+            // }else{
+            //     document.getElementById('btn').disabled = false;
+            // } 
+        }
+
+            // console.log(document.getElementById('print-name').innerHTML)
+            // console.log(document.getElementById('print-email').innerHTML)
+            // console.log(document.getElementById('print-pass').innerHTML)
+            // console.log(document.getElementById('print-tel').innerHTML)
+
+        // a = console.log(document.getElementById('print-name').innerHTML)
+        // b = console.log(document.getElementById('print-email').innerHTML)
+        // c = console.log(document.getElementById('print-pass').innerHTML)
+        // d = console.log(document.getElementById('print-tel').innerHTML)
+        // if(a == b && b == c && c == d){
+        //     document.getElementById('btn').disabled = false;
+        // }else{
+        //     document.getElementById('btn').disabled = true;
+        // } 
+        // function btn_click(){
+        //     a = console.log(document.getElementById('print-name').innerHTML)
+        //     b = console.log(document.getElementById('print-email').innerHTML)
+        //     c = console.log(document.getElementById('print-pass').innerHTML)
+        //     d = console.log(document.getElementById('print-tel').innerHTML)
+
+        //     if(a=b=c=d){
+        //         document.getElementById('btn').disabled = false;
+        //     }else{
+        //         document.getElementById('btn').disabled = true;
+        //     }
+            
+        // }
+    </script>
+
+    <div class = "row container-fluid col-lg-12 pad marg ab">
+        <div class="col-lg-12 pad marg">
+            <div class="col-lg-2 pad marg"></div>
+            <div class="col-lg-8 ad pad marg" >
+                <div class="col-lg-4 al">
+                    <p class="inline al">Bullets :&#160; <p class="inline al" id="print"></p></p>
+                </div>
+                <div class="col-lg-4"></div>
+                <div class="col-lg-4">
+                    <p class="inline al">Score :&#160; <p id="prints" class="inline al"></p></p>
+                </div>
+            </div>
+            <div class="col-lg-2 pad marg"></div>
+        </div>
+        <div class="col-lg-12 pad marg">
+            <div class="col-lg-2 pad marg"></div>
+            <di class="col-lg-8 ae pad marg" onclick="not_fire()">
+                <div col-lg-2">
+                    <button onclick="fire()" class="col-lg-1 btn btn-primary circle" >Fire</button>
+                </div>         
+            </div>
+            <div class="col-lg-2 pad marg"></div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        document.getElementById('print').innerHTML = 5;
+        document.getElementById('prints').innerHTML = 0;
+
+
+        function fire(){
+            // document.getElementById('print').innerHTML = 4;
+            // document.getElementById('prints').innerHTML = 1;
+            i = document.getElementById('print').innerHTML;
+            j = document.getElementById('prints').innerHTML;
+            // document.getElementById('print').innerHTML = parseInt(i) - 1;
+            document.getElementById('prints').innerHTML = parseInt(j) + 1;
+            if(j > 5){
+                alert("game over");
+                document.write('game over');
+            }
+            // if(fire){
+            //     document.getElementById('print').innerHTML = parseInt(i) - 1;
+            //     document.getElementById('prints').innerHTML = parseInt(j) + 1;
+            //     if(i == 0){
+            //         alert("game over");
+            //         document.write('game over');
+            //     }
+            // }else{
+            //     document.getElementById('print').innerHTML = parseInt(i) - 1;
+            //     document.getElementById('prints').innerHTML = parseInt(j) + 0;
+
+            // }
+        }
+        function not_fire(){
+            i = document.getElementById('print').innerHTML;
+            j = document.getElementById('prints').innerHTML;
+
+            if(not_fire){
+                document.getElementById('print').innerHTML = parseInt(i) - 1;
+                document.getElementById('prints').innerHTML = parseInt(j) + 0;
+                if(i == 0){
+                alert("game over");
+                document.write('game over');
+                }
+            }else{
+                fire();
+                // document.getElementById('print').innerHTML = parseInt(i) - 1;
+                // document.getElementById('prints').innerHTML = parseInt(j) + 1;
+                // if(i == 0){
+                // alert("game over");
+                // document. write('game over');
+                // }
+
+            }
+        }
+            // document.getElementById('print').innerHTML = parseInt(i) - 1;
+            // document.getElementById('prints').innerHTML = parseInt(j) + 0;
+        
+
+
+
+
+
+
+
+        
+    </script>
+
+</body>
+</html>

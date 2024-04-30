@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Append-prepend</title>
+    <link rel="stylesheet" href="../styles/css/bootstrap.min.css">
+    <script src="../styles/js/jquery.js"></script>
+    <script src="../styles/js/bootstrap.min.js"></script>
+    <script src="../jquery.min.js"></script>
+</head>
+<body>
+    <button id="btn1">Active 1</button>
+    <form>
+        <div id="ab"></div><br>
+        <div class="form-group">
+            <button type="button" id="btn-2" onclick="sbmt(this.id)" reload>Submit</button>
+        </div>
+    </form>
+    <div>
+        <table id="tb" class="table table-bordered">
+        </table>
+    </div>
+    <script>
+        var i = 0;
+        $(document).ready(function(){
+            $('#btn1').click(function(){
+                    i += 1;
+       
+                    $('#ab').append('<div class="alert alert-success form-group" id="abc'+i+'"><input type="text" value="'+i+'" id="cls'+i+'" name="username'+i+'" class="input-sm"><button class="btn btn-danger close" type="button" onclick="hd('+"'abc"+i+"'"+')">x</button></div>');
+            });
+        })
+        let a = [];
+        console.log(a);
+        function hd(x){
+            console.log(x);
+            $(document).ready(function(){
+                $('#'+x).animate({
+                    marginLeft: '100%'
+                },{duration: 1000});
+                $("#"+x).hide({
+                    duration: 100
+                });
+                $("#a"+x).hide({
+                    duration: 100
+                });
+            })
+            a.splice("a"+x, 1);
+            console.log(a);
+        }
+        function sbmt(){
+            console.log(i);
+            var list = '';
+            list += '<tr><th>Name</th></tr>';
+            list += '<tr class="success">';
+            for(k = 1; k<=i; k++){
+                // let a = [""];
+                // a += [','+document.getElementById('cls'+k).value];
+                
+                h = document.getElementById('cls'+k).value;
+                a.push(h);
+                console.log(a);
+                // d = a[k];
+                list += '<td id="aabc'+(k)+'">'+a[k-1]+'</tr>';
+            }
+            list += '</tr>'; 
+            console.log(a);
+            document.getElementById('tb').innerHTML = list;
+        }
+        // function check(){
+        //     for(k = 1; k<=3; k++){
+        //         // let a = [""];
+        //         console.log(a);
+        //         h = document.getElementById('cls'+k).value;
+        //         a.push(h);
+        //         d = a[k-1];
+        //         console.log(d);
+
+        //         console.log(a);
+        //         console.log('hi');
+        //         // list += '<td id="aabc'+(k)+'">'+a[k]+'</tr>';
+        //     }
+        // }
+        // check();
+    </script>
+</body>
+</html>

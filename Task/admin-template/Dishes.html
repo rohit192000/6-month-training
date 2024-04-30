@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="styles/style.css">
+</head>
+<body class="body-2">
+
+<div class="col-lg-2 left">
+	<ul class="list-group">
+		<li class="list-group-item">
+			<a href="Dashboard.html">
+				<span class="glyphicon glyphicon-dashboard"></span>
+				&nbsp;&nbsp; Dashboard
+			</a>
+		</li>
+		<li class="list-group-item">
+			<a href="Category.html">
+				<span class="glyphicon glyphicon-list-alt"></span>
+				&nbsp;&nbsp; Category
+			</a>
+		</li>
+		<li class="list-group-item">
+			<a href="Dishes.html">
+				<span class="glyphicon glyphicon-cutlery"></span>
+				&nbsp;&nbsp; Dishes
+			</a>
+		</li>
+		<li class="list-group-item">
+			<a href="Orders.html">
+				<span class="glyphicon glyphicon-book"></span>
+				&nbsp;&nbsp; Orders
+			</a>
+		</li>
+		<li class="list-group-item">
+			<a href="Users.html">
+				<span class="glyphicon glyphicon-user"></span>
+				&nbsp;&nbsp; Users
+			</a>
+		</li>
+	</ul>
+</div>
+
+<div class="col-lg-10 right">
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+
+			<div class="navbar-header">
+		      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+
+		    </div>
+		    <div class="collapse navbar-collapse" id="myNavbar">
+
+
+			<ul class="nav navbar-nav">
+				<li><a href=""><span class="glyphicon glyphicon-menu-hamburger"></span></a></li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li class="dropdown">
+					<a href="" data-toggle="dropdown">
+						<span class="glyphicon glyphicon-user"></span>
+					</a>
+					<ul class="dropdown-menu">
+						<li><a href="">Profile</a></li>
+						<li><a href="">Setting</a></li>
+						<li><a href="index.html">Logout</a></li>
+					</ul>
+				</li>
+			</ul>
+
+			</div>
+
+		</div>
+	</nav>
+
+
+	<div class="col-lg-12">
+
+		<div class="col-lg-4">
+			<div class="col-lg-12 box2">
+				
+
+
+				<form>
+					<h3>Add Dishes</h3>
+					<div class="form-group">
+						<select class="form-control">
+							<option>Select Category</option>
+							<optgroup label="Cat 1">
+								<option>SubCat 1</option>
+							</optgroup>
+							<optgroup label="Cat 2">
+								<option>SubCat 1</option>
+							</optgroup>
+							<optgroup label="Cat 3">
+								<option>SubCat 1</option>
+							</optgroup>
+							<optgroup label="Cat 4">
+								<option>SubCat 1</option>
+							</optgroup>
+						</select>
+					</div>
+					<div class="form-group">
+						<input type="text" name="category" placeholder="Name" class="form-control">
+					</div>
+					<div class="form-group">
+						<input type="text" name="category" placeholder="Price" class="form-control">
+					</div>
+					<div class="form-group">
+						<input type="text" name="category" placeholder="Cost Price" class="form-control">
+					</div>
+					<div class="form-group">
+						<input type="text" name="category" placeholder="Ingridients" class="form-control">
+					</div>
+					<div class="form-group">
+						<input type="text" name="category" placeholder="Description" class="form-control">
+					</div>
+					<div class="form-group">
+						<input type="file" name="category" placeholder="Image" class="form-control">
+					</div>
+					<div class="form-group">
+						<input type="submit" class="btn btn-dark" value="Add Dish">
+					</div>
+
+				</form>
+
+			</div>
+		</div>
+
+
+		<div class="col-lg-8">
+			
+			<div class="box2 padding-20">
+				
+				<div class="panel panel-default">
+					<div class="panel-heading" data-toggle="collapse" data-target="#cat1">
+						<h3>Category 1</h3>
+					</div>
+					<div class="panel-body collapse" id="cat1">
+						<ul class="list-group">
+							<li class="list-group-item">
+								<div class="row">
+									<div class="col-lg-12">
+
+										<button class="btn btn-danger pull-right"><span class="glyphicon glyphicon-trash"></span></button>
+
+										<div class="col-lg-3">
+											<img src="images/burger2.jpg" class="img-responsive">
+										</div>
+										<div class="col-lg-8">
+											<h2>Burger</h2>
+											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+											tempor incididunt ut labore et dolore magna aliqua.</p>
+											<span>Rs. 60 <del>160</del></span>
+										</div>
+									</div>
+								</div>
+							</li>
+
+							<li class="list-group-item">
+								<div class="row">
+									<div class="col-lg-12">
+
+										<button class="btn btn-danger pull-right"><span class="glyphicon glyphicon-trash"></span></button>
+
+										<div class="col-lg-3">
+											<img src="images/burger2.jpg" class="img-responsive">
+										</div>
+										<div class="col-lg-8">
+											<h2>Burger</h2>
+											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+											tempor incididunt ut labore et dolore magna aliqua.</p>
+											<span>100 <del>60</del></span>
+										</div>
+									</div>
+								</div>
+							</li>
+
+
+						</ul>
+					</div>
+				</div>
+
+
+
+
+			</div>
+
+		</div>
+
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

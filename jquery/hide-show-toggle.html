@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hide Show Toggle</title>
+    <script src="jquery.min.js"></script>
+    <style>
+        .ab{
+            height: 100px;
+            width: 100px;
+            background: red;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn1">Active</button>
+    <button id="btn2">Disable</button>
+    <button id="btn3">Toggle</button>
+    <div class="ab" id="ab"></div>
+
+    <script>
+        $(document).ready(function(){
+            $('#btn1').click(function(){
+                $('#ab').hide();
+            })
+            $('#btn2').click(function(){
+                $('#ab').show();
+            })
+            $('#btn3').click(function(){
+                $('#ab').toggle();
+            })
+        })
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

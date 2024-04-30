@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input from object</title>
+</head>
+<body>
+    <!-- <label for="name">First Name</label>
+    <input type="text" name="FirstName" id="name" readonly><br><br>
+    <label for="lastname">Last Name</label>
+    <input type="text" name="LastName" id="lastname" readonly><br><br> -->
+    <!-- <select id="tr">
+        <!-- <option value="" disabled="true" id="gender" selected></option> -->
+        <!-- <option value="male" name="gender">Male</option>
+        <option value="female" name="gender">Female</option> -->
+    <!-- </select> -->
+
+    <div id="print"></div>
+
+    <script>
+
+        var a = [{FirstName:"Rohit",LastName:"Samal"}, {FirstName:"Aakash",LastName:"Passi"}, {FirstName:"Naveen",LastName:"Singh"}, {FirstName:"Amritpal",LastName:"Singh"}];
+        x = a.length;
+        var c = '';
+        // document.getElementById('name').value = a[0].FirstName;
+        // document.getElementById('lastname').value = a[1].LastName;
+        for(i = 0; i<x; i++){
+            c+= "<input type='text' name='FirstName' value='"+a[i].FirstName+"' readonly>";
+            c+= "<input type='text' name='LastName' value='"+a[i].LastName+"' readonly>";
+            c+= "<select><option>Male</option></select><br><br>";
+        // document.getElementById('name').value = a[0].FirstName;
+        // document.getElementById('lastname').value = a[1].LastName;
+            // document.getElementById('firstname').value = a[i].FirstName;
+            // document.getElementById('lastnamr').value = a[i].LastName;
+        }
+        document.getElementById('print').innerHTML = c;
+        // for(j=0; j<x; j++){
+        // document.getElementById('j').value = a[j].FirstName;
+        // document.getElementById('j').value = a[j].LastName;
+        // // document.getElementById('firstname').value = a[0].FirstName;
+        // // document.getElementById('lastnamr').value = a[0].LastName;
+        // }
+    </script>
+</body>
+</html>

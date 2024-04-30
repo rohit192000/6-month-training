@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validtion</title>
+</head>
+<body>
+    <fieldset>
+        <legend>Fill the form correctly</legend>
+        <form>
+            <label for="username">Name</label>
+            <input type="text" name="username" id="name" required pattern="^[A-Z][a-z]{3,15}[ ][A-Z]*[a-z]*{3,15}[][A-Z][a-z]{3,15}" ><br><br>
+            <label for="mail">E-mail</label>
+            <input type="text" name="useremail" id="mail" required pattern="^[a-z][a-z0-9]{4,15}[@][a-z]{4,10}[.][a-z]{2,10}[.in]*"><br><br>
+            <label for="contact">Contact</label>
+            <input type="text" name="Contact" id="contact" required pattern="^[5-9][0-9]{9}"><br><br>
+            <fieldset>
+                <legend>Gender</legend>
+                <ul style="list-style-type: none;">
+                    <li>
+                        <input type="radio" name="Gender" id="male" required>
+                        <label for="male">Male</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="Gender" id="female">
+                        <label for="female">Female</label>
+
+                    </li>
+                </ul>
+            </fieldset><br><br>
+            <label for="dob">D.O.B</label>
+            <input type="date" name="Birth_date" id="dob" max="2000-01-01" value="1990-01-01" required><br><br>
+            <button type="submit">Click</button>
+
+        </form>
+    </fieldset>
+</body>
+</html>

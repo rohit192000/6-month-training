@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drawer</title>
+    <style>
+        body,html{
+            padding: 0px;
+            margin: 0px;
+        }
+        .drawer{
+            width: 200px;
+            height: 100vh;
+            background: whitesmoke;
+            position: fixed;
+            top: 0px;
+            margin-left: -20px;
+            z-index: 1;
+            transition: 5s;
+            /* display: none; */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="drawer" id="drawer">
+        <ul class="ul1">
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+            <li>Gallery</li>
+        </ul>
+    </div>
+    <!-- <div class="shadow" id="shadow" onclick="hide()"></div> -->
+    <div id="left" style="display: inline-block">
+        <button onclick="show()" id="btn"><span id="bttn">Left</span></button>
+
+    </div>
+    <div id="right" style="display: inline-block">
+        <button onclick="show()" id="btn"><span id="bttn">Right</span></button>
+
+    </div>
+    <div id="top" style="display: inline-block">
+        <button onclick="show()" id="btn"><span id="bttn">Top</span></button>
+
+    </div>
+    <div id="bottom" style="display: inline-block">
+        <button onclick="show()" id="btn"><span id="bttn">Bottom</span></button>
+
+    </div>
+    <script>
+
+        document.getElementById('drawer').style.display = 'none';
+
+        function show(){
+            document.getElementById('drawer').style.display = 'block';
+            document.getElementById('left').style.marginLeft = '180px';
+            document.getElementById('left').innerHTML = '<button onclick="hide()" id="btn"><span id="bttn">Hide Drawer</span></button>';
+            // document.getElementById('bttn').innerText = 'Hide Drawer';
+            // document.getElementById('shadow').style.display = 'block';
+        }
+
+        function hide(){
+            document.getElementById('drawer').style.display = "none";
+            document.getElementById('left').style.marginLeft = '0px';
+            document.getElementById('left').innerHTML = '<button onclick="show()" id="btn"><span id="bttn">Left</span></button>';
+            // document.getElementById('shadow').style.display = 'none';
+
+        }
+    </script>
+</body>
+</html>

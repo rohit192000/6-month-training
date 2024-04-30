@@ -1,0 +1,25 @@
+.ac{
+    color: black;
+    font-size: 200px;
+}
+
+.ae{
+    background: red;
+    height: 500px;
+    width: 500px;
+    border: 20px solid black;
+
+}
+
+.ad{
+    background: red;
+    height: 500px;
+    width: 500px;
+    border-width: 20px;
+    border-color: green;
+    border-style: solid; 
+}
+
+.at{
+    background-color: hotpink;
+}

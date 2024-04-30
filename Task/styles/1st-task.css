@@ -1,0 +1,25 @@
+.ar{
+    height: 100px;
+    width: 50px;
+    border-top:2px black solid;
+    border-bottom:2px black solid;
+    border-left:2px black solid;
+    border-top-left-radius:60px;
+    border-bottom-left-radius:60px;
+}
+.ad{
+    height: 100px;
+    width: 50px;
+    margin-left: 51px;
+    margin-top: -2.0px;
+    margin-bottom:-1.5px;
+    border-bottom:2px black solid;
+    border-top:2px black solid;
+    border-right:2px black solid;
+    border-top-right-radius:60px;
+    border-bottom-right-radius:60px;
+    transition: linear 3s;
+}
+.ab:hover{
+    transform: rotate(180deg);
+}

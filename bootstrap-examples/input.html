@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/css/bootstrap.min.css">
+    <script src="styles/js/jquery.js"></script>
+    <script src="styles/js/bootstrap.min.js"></script>
+    <title>Input Classes</title>
+</head>
+<body>
+    <h2>.input-group-addon or .input-grpup-btn</h2>
+    <div class="input-group">
+        <span class="input-group-addon">@</span>
+        <input type="text" class="form-control" placeholder="USername">
+    </div>
+    <br>
+
+    <div class="input-group">
+        <input type="text" placehoder="Receipient's Username" class="form-control"> 
+        <span class="input-group-addon">@example.com</span>
+    </div>
+
+    <br>
+
+    <div class="input-group">
+        <input type="search" placeholder="Search" class="form-control">
+        <span class="input-group-addon">GO!</span>
+    </div>
+
+    <div class="input-group input-group-sm">
+        <input type="text" class="form-control" placeholder="Choose the sizes">
+        <span class="input-group-addon">@</span>
+    </div>
+
+
+
+    <br>
+    <h2>Checkbox and Radio buttons</h2>
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="input-group">
+                <span class="input-group-addon">
+                    <input type="checkbox">
+                </span>
+                <input type="text" class="form-control">
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="input-group">
+                <span class="input-group-addon">
+                    <input type="radio">
+                </span>
+                <input type="text" class="form-control">
+            </div>
+        </div>
+    </div>
+
+
+    <h2>Button addons</h2>
+
+    <div class="row">
+        <div class="col-lg-3">
+            <div class="input-group">
+                <span class="input-group-btn">
+                    <button class="btn btn-default" type="button">Go!</button>
+                </span>
+                <input type="text" class="form-control" placeholder="Search for /..">
+            </div>
+        </div>
+
+        <div class="col-lg-3">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search for /..">
+                <span class="input-group-btn">
+                    <button class="btn btn-default" type="button">Go!</button>
+                </span>
+
+            </div>
+        </div>
+
+        <div class="col-lg-3">
+            <div class="input-group">
+                <div class="input-group-btn">
+                    <button class="btn btn-default  dropdown-toggle" data-toggle="dropdown" type="button" >Action
+                    <!-- <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"> -->
+                    <span class="caret"></span>
+                    <!-- <span class="sr-only">Toggle-dropdown</span> -->
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Menu</a></li>
+                        <li><a href="#">Perform</a></li>
+                        <li class="divider" role="seperator"></li>
+                        <li class="disabled"><a href="#">After Seperate</a></li>
+                    </ul>
+                </div>
+                    <input type="text" class="form-control">
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+</body>
+</html>

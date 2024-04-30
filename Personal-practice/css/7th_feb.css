@@ -1,0 +1,36 @@
+.container{
+    display: flex;
+}
+
+.container > *{
+    border: 1px solid green;
+}
+.container>div>div{
+    display: flex;
+}
+/* div{
+    display: inline;
+} */
+
+.ac{
+    border: 10px solid black;
+    height: 100px;
+    width: 100px;
+}
+.ad{
+    box-sizing: content-box;
+    border: 10px solid red;
+    width: 100%;
+}
+
+
+.ae{
+    border: 10px solid black;
+    height: 100px;
+    width: 100px;
+}
+.af{
+    box-sizing: border-box;
+    border: 10px solid red;
+    width: 100%;
+}

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+</head>
+<body>
+    <script>
+        var d =  new Date();
+        console.log('<h1>Date Function</h1>');
+        console.log(d);
+        console.log('<br>');
+        console.log('<h2>Functions using date function</h2>');
+        console.log('<h3>String Functions using date function</h3>');
+        console.log(d.toString());
+        console.log('<br>');
+        console.log(d.toUTCString());
+        console.log('<br>');
+        console.log(d.toISOString());
+        console.log('<br>');
+        console.log(d.toDateString());
+        console.log(d.getFullYear());
+        console.log(d.getDate());
+        console.log(d.getFullYear());
+        console.log(d.getDate());
+        console.log(d.getHours());
+        console.log(d.getMinutes());
+        console.log(d.getTime());
+        console.log(d.getSeconds());
+        console.log(d.getMilliseconds());
+        console.log(d.getMonth());
+        console.log(d.getDay());
+        // console.log(Date.now());
+        console.log(d.setFullYear(2002));
+        console.log(d.getFullYear());
+        console.log(d.setMonth(4));
+        console.log(d.getMonth());
+        console.log(d.setMinutes(4));
+        console.log(d.getMinutes());
+        // console.log(d.getMinutes());
+        console.log(d.getDay());
+        console.log(d.setDate(5));
+        console.log(d);
+
+        console.log(Math.E);
+        console.log(Math.PI);
+        console.log(Math.SQRT2);
+        console.log(Math.SQRT1_2);
+
+        console.log(Math.LN2); // returns natural logarithm of 2
+        console.log(Math.LN10); // returns natural logarithm of 10
+        console.log(Math.LOG2E); // returns base 2 logarithm of E
+        console.log(Math.LOG10E); // returns base 10 logarithm of E
+
+
+        var x = 6.2;
+        var y = 6.7;
+        console.log(Math.round(x)); //rounded x to its nearest integer.
+        console.log(Math.ceil(x)); // rounded up x to its nearest integer.
+        console.log(Math.floor(y)); // rounded x down to its nearest integer.
+        console.log(Math.trunc(x)); //returns integer part of x (new in x)
+
+        console.log(Math.random());
+        console.log(Math.random() *  100000);
+        console.log(Math.floor(Math.random() * 100000));
+        // 0 - 100000
+
+        // now we make random number generator between max and min
+
+
+        var max = 99999;
+        var min = 10000;
+
+        console.log(Math.floor(Math.random() * (max-min+1)) + min);
+
+
+
+
+
+        // STRING FUNCTIONS
+
+        console.log('<h4>String Functions</h4>')
+        var text = "Hello World";
+        var letter = text.charAt(6);
+        console.log(letter);
+
+        var code = text.charCodeAt(1);
+        console.log(code);
+
+        var result = text.endsWith("world"); //check whether string is ending in given string or not
+        console.log(result);
+
+        var result1 = text.endsWith("World");
+        console.log(result1);
+
+        var result3 = text.includes("ell"); //cheks string is present or not
+        console.log(result3);
+
+        var result4 = text.indexOf('o');// returns index value of string In case string is not present returns -1.
+        console.log(result4);
+
+        var result5 = text.lastIndexOf("o"); //returns index value from the right side
+        console.log(result5);
+
+        var result6 = text.length;
+        console.log(result6);
+
+        var result7 = text.replace("Hello", "Rohit");
+        console.log(result7);
+
+        var result8 = text.match("ello");
+        console.log(result8);
+
+        var result9 = text.repeat(4);
+        console.log(result9);
+
+        var result10 = text.slice(4,11); // returns string come between two index pass in the arguments
+        console.log(result10);
+
+        var result11 = text.search("l");
+        console.log(result11);
+
+        var strr = 'L,XL,XXL,XXXL';
+        // ['L','XL','XXL','XXXL']
+
+        var result12 = strr.split(",");
+        console.log(result12);
+
+        var result13 = text.split(" ");
+        console.log(result13);
+
+        var result14 = text.substr(1,4);
+        console.log(result14);
+
+        console.log(text.toLowerCase());
+        console.log(text.toUpperCase());        
+
+
+
+        
+    </script>
+</body>
+</html>

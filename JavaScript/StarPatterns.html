@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+<body>
+    <h1>For Loop</h1>
+
+    <script>
+        for (var i=0; i<10; i++){                                                              
+            if(i%2 == 1){
+                for(j = 0; j < i; j++){
+                document.write("*")
+                // document.write(j)
+              }
+            }
+ 
+            document.write("<br>");
+            // document.write("next loop")
+        }
+        
+        
+        
+        document.write("<br>");
+
+
+
+
+        for (var i=10; i>0; i--){
+            if(i%2 == 1){
+                for(j = 0; j < i; j++){
+                document.write("*");
+                // document.write(j)
+              }
+            }
+ 
+            document.write("<br>");
+            // document.write("next loop")
+        }
+        document.write("<br><br>")
+
+        for (var i=0; i<10; i++){                                                              
+            if(i%2 == 0 || i == 1){
+                for(j = 0; j < i; j++){
+                document.write("*")
+                // document.write(j)
+              }
+            document.write('<br>')
+            }
+            // document.write("next loop")
+        }
+
+        document.write('<br><br><br>')
+
+        for(i = 10; i>0; i--){
+            for(j = 0; j < (10 - i); j++) {
+                document.write("&nbsp;")
+            }
+            for(k = 0; k < i; k++){
+                document.write("*");
+            }
+            document.write("<br>");
+
+            }
+
+
+        for(i = 0; i<10; i++){
+            for(j = 0; j < (10 - i); j++) {
+                document.write("&nbsp;")
+            }
+            for(k = 0; k < i; k++){
+                document.write("*");
+            }
+            document.write("<br>");
+
+            }
+            // Triangle Even No.
+        for(i = 0; i<10; i++){
+            for(j = 0; j < (10 - i); j++) {
+                document.write("&nbsp;")
+            }
+            if(i%2 == 0 || i == 1){
+                for(k = 0; k < i; k++){
+                document.write("*");
+                if(i == 1){
+                    document.write('<br>')
+                }
+            }
+            }
+            document.write('<br>')
+            }
+
+        // Triangle Odd No.
+        for(i = 0; i<10; i++){
+            for(j = 0; j < (10 - i); j++) {
+                document.write("&nbsp;")
+            }
+            if(i%2 == 1){
+                for(k = 0; k < i; k++){
+                document.write("*");
+            }
+            }
+            document.write('<br>')
+            }
+
+            
+    </script>
+</body>
+</html>                     

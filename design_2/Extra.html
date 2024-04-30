@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/css/bootstrap.min.css">
+    <script src="styles/js/jquery.js"></script>
+    <script src="styles/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="styles/extra.css">
+    <title>Extras</title>
+</head>
+
+<body>
+    <div class="container-fluid ">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 main-box marg-0">
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 st-sec">
+                <div class="col-lg-12 col-xs-12 header-box"></div>
+                <div class="col-lg-12 col-xs-12">
+                    <div class="col-lg-12 col-xs-12 header-txt">
+                        <p class="marg-0"><span id="sp-hd-1" class="crsive">Fresh Healthy</span></p>
+                        <p class="marg-0"><span id="sp-hd-2" class="crsive">Delicious Salads</span></p>
+                        <p class="marg-0"><span id="sp-hd-3" class="crsive">We made fresh and healthy foods</span></p>
+                    </div>
+                </div>
+                <div class="col-lg-12 col-xs-12 header-box"></div>
+                <div
+                    class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12 box">
+                    <form action="#" id="myform">
+                        <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <label for="username" class="control-label crsive">Name</label>
+                            <div>
+                                <input type="text" class="form-control input-lg crsive" id="username" name="username"
+                                    placeholder="Enter your full name">
+                            </div>
+                        </div>
+                        <div class="form-group col-lg- col-md-12 col-sm-12 col-xs-12">
+                            <label for="mail" class="control-label crsive">Email</label>
+                            <div>
+                                <input type="email" class="form-control input-lg crsive" id="mail" name="useremail"
+                                    placeholder="Enter your email">
+                            </div>
+                        </div>
+                        <div class="form-group col-lg- col-md-12 col-sm-12 col-xs-12">
+                            <label for="cont" class="control-label crsive">Password</label>
+                            <div>
+                                <input type="password" class="form-control input-lg crsive" id="password"
+                                    name="usercontact" placeholder="Enter your password">
+                            </div>
+                        </div>
+                        <div class="form-group col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                            <button type="button" class="btn btn-info btn-lg crsive" onclick="login()">Login</button>
+                        </div>
+                    </form>
+
+                    <div class="alert alert-danger" id="myform-data">
+                        Hello
+                    </div><br>
+                    <div class="form-group col-lg-2 col-sm-2 col-xs-2" id="form-logout">
+                        <button type="button" class="btn btn-info btn-lg crsive" onclick="logout()">Logout</button>
+                    </div>
+                </div>
+                <div class="col-lg-12 col-xs-12 header-box"></div>
+                <div class="col-lg-12" id="print"></div>
+            </div>
+            <script>
+                var users = [{ Name: 'Naveen', Email: 'naveen@gmail.com', Password: '123456' },
+                { Name: 'Raju', Email: 'raju@gmail.com', Password: '123456' },
+                { Name: 'Ravi', Email: 'ravi@gmail.com', Password: '123456' }]
+
+                var myid = localStorage.getItem('adminlogin');
+
+                function checklog() {
+
+                    if (myid) {
+                        // hide form
+                        document.getElementById('myform').style.display = 'none';
+                        document.getElementById('myform-data').style.display = 'block';
+                        document.getElementById('form-logout').style.display = 'block';
+
+                    } else {
+                        // show form
+                        document.getElementById('myform').style.display = 'block';
+                        document.getElementById('myform-data').style.display = 'none';
+                        document.getElementById('form-logout').style.display = 'none';
+
+                    }
+                }
+                checklog();
+
+                function login() {
+                    var name = document.getElementById('username');
+                    var email = document.getElementById('mail');
+                    var password = document.getElementById('password');
+                    if (name.value == '') {
+                        alert('Please fill name');
+                        name.focus();
+                    } else if (email.value == '') {
+                        alert('Please fill email');
+                        email.focus();
+                    } else if (password.value == '') {
+                        alert('Please fill password');
+                        password.focus();
+                    } else {
+                        for (var i = 0; i < users.length; i++) {
+                            if (name.value == users[i].Name && email.value == users[i].Email && password.value == users[i].Password) {
+                                alert('Login Successful');
+                                localStorage.setItem('adminlogin', email.value);
+                                window.location.href = 'Extra.html';
+                                break;
+                            }
+                            if (users.length == (i + 1)) {
+                                alert('Wrong Id or Password');
+                            }
+                        }
+                    }
+                }
+
+                function logout() {
+                    localStorage.removeItem('adminlogin');
+                    location.reload();
+                }
+            </script>
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 nd-sec" id="prd">
+            </div>
+        </div>
+    </div>
+    <script>
+        var product = [{ Image: "images/54-546030_plate-of-food-png.png", Name: "Mix Salad", Type: "Salad", Ingredients: "Mix Vegetable", Price: "$24.00", tip: "lik1" },
+        { Image: "images/54-546030_plate-of-food-png.png", Name: "Mix Salad", Type: "Salad", Ingredients: "Mix Vegetable", Price: "$24.00", tip: "lik2" },
+        { Image: "images/54-546030_plate-of-food-png.png", Name: "Mix Salad", Type: "Salad", Ingredients: "Mix Vegetable", Price: "$24.00", tip: "lik3" },
+        { Image: "images/54-546030_plate-of-food-png.png", Name: "Mix Salad", Type: "Salad", Ingredients: "Mix Vegetable", Price: "$24.00", tip: "lik4" },
+        { Image: "images/54-546030_plate-of-food-png.png", Name: "Mix Salad", Type: "Salad", Ingredients: "Mix Vegetable", Price: "$24.00", tip: "lik5" },
+
+        { Image: "images/54-546030_plate-of-food-png.png", Name: "Quinoa Soup", Type: "Soup", Ingredients: "Spicy garlic", Price: "$22.00", tip: "lik6" },
+        { Image: "images/54-546030_plate-of-food-png.png", Name: "Quinoa Soup", Type: "Soup", Ingredients: "Spicy garlic", Price: "$22.00", tip: "lik7" },
+        { Image: "images/54-546030_plate-of-food-png.png", Name: "Quinoa Soup", Type: "Soup", Ingredients: "Spicy garlic", Price: "$22.00", tip: "lik8" },
+        { Image: "images/54-546030_plate-of-food-png.png", Name: "Quinoa Soup", Type: "Soup", Ingredients: "Spicy garlic", Price: "$22.00", tip: "lik9" },
+        { Image: "images/54-546030_plate-of-food-png.png", Name: "Quinoa Soup", Type: "Soup", Ingredients: "Spicy garlic", Price: "$22.00", tip: "lik10" },
+
+        { Image: "images/54-546030_plate-of-food-png.png", Name: "Avocado drink", Type: "Drink", Ingredients: "Avocado and Cucumber", Price: "$15.00", tip: "lik11" },
+        { Image: "images/54-546030_plate-of-food-png.png", Name: "Avocado drink", Type: "Drink", Ingredients: "Avocado and Cucumber", Price: "$15.00", tip: "lik12" },
+        { Image: "images/54-546030_plate-of-food-png.png", Name: "Avocado drink", Type: "Drink", Ingredients: "Avocado and Cucumber", Price: "$15.00", tip: "lik13" },
+        { Image: "images/54-546030_plate-of-food-png.png", Name: "Avocado drink", Type: "Drink", Ingredients: "Avocado and Cucumber", Price: "$15.00", tip: "lik14" },
+        { Image: "images/54-546030_plate-of-food-png.png", Name: "Avocado drink", Type: "Drink", Ingredients: "Avocado and Cucumber", Price: "$15.00", tip: "lik15" },
+
+        { Image: "images/54-546030_plate-of-food-png.png", Name: "Avocado drink", Type: "Sweet", Ingredients: "Avocado and Cucumber", Price: "$15.00", tip: "lik16" }
+        ];
+        list = "";
+        list += '<div>';
+        list += '<ul class="pager col-lg-6 col-md-6 col-sm-6 col-xs-12">';
+        for (var i = 0; i < product.length - 1; i++) {
+            a = product[i].Type;
+            b = product[i + 1].Type;
+            c = product[i].Type;
+            if (a != b || i == product.length - 2) {
+                // console.log('running');
+                list += '<li><a class="li-a crsive" href="#" onclick=\"showdata(' + "'" + (product[i].Type) + "'" + ')\";><span class="glyphicon glyphicon-cd li-icn"></span>&nbsp;' + c + '</a></li>';
+            } else if (i < product.length) {
+            }
+        }
+        list += '</ul>';
+        list += '<div class="" id="datata"></div>';
+        list += '</div>';
+        document.getElementById('prd').innerHTML = list;
+        document.getElementById('prd').style.fontWeight = 'bolder';
+        document.getElementById('prd').style.fontSize = 'larger';
+        document.getElementById('prd').style.fontFamily = 'cursive';
+        function showdata(x) {
+            console.log('kyon nhi chl rha');
+            var str = '';
+            for (var i = 0; i < product.length; i++) {
+                if (x == product[i].Type) {
+                    str += '<div class="col-lg-5 col-lg-offset-1 col-md-5 col-md-offset-1  col-sm-5 col-sm-offset-1 col-xs-10 col-xs-offset-1 box-img">';
+                    str += '<div class="col-lg-12 col-md-12 col-sm-12 col-xs-10 col-xs-offset-1">';
+                    str += '<img src="' + product[i].Image + '" class="img-responsive img-circle img-thumbnail">';
+                    if (myid) {
+                        str += '<span class="glyphicon glyphicon-heart-empty" style="cursor:pointer;" id="ch' + product[i].tip + '" onclick=change("' + product[i].tip + '")></span> ';
+                        str += '<span class="glyphicon glyphicon-heart" style="cursor:pointer; color: red; display: none;" id="showch' + product[i].tip + '" onclick=change2("' + product[i].tip + '")></span> ';
+                    }
+                    str += '<h5>' + product[i].Name + '</h5>';
+                    str += '<h5>' + product[i].Ingredients + '</h5>';
+                    str += '<h5>' + product[i].Price + '</h5>';
+                    str += '</div>';
+                    str += '</div>';
+                }
+            }
+            document.getElementById('datata').innerHTML = str;
+        }
+        showdata("Salad");
+
+        // showing favourites
+        var favs = [];
+        var items = '';
+        function change(x) {
+            document.getElementById('ch' + x).style.display = "none";
+            document.getElementById('showch' + x).style.display = "block";
+            // console.log(x);
+            this.favProd = function () {
+                for (var i = 0; i < product.length; i++) {
+                    if (product[i].tip == x) {
+                        // fav = [];
+                        a = product[i].Name;
+                        b = product[i];
+                        // console.log(b);
+                        favs.push(a);
+                        // console.log(favs[i]);
+                        // if (fav.indexOf(a)){
+                        //     console.log('chl gya');
+                        //     var favs = fav.concat(fav);
+                        // }
+                        // console.log(favs);
+                        // console.log(i);
+                        console.log(favs);
+                        console.log(favs[i]);
+
+                        var l0 = "<ol class='list-group'>";
+                        var l2 = "</ol>";
+                        items += l0;
+                        // console.log(product[i].tip);
+                        // console.log('hi');
+                        // console.log(i);
+                        var l1 = "<li class='list-group-item'>" + product[i].Name + "</li>";
+                        items += l1;
+                        document.getElementById('print').innerHTML = items;
+                        items += l2;
+                        console.log(items);
+                    }
+                    // return fav;
+                    // console.log(fav);
+                    // return fav;
+
+                }
+            }
+            // console.log('jijf');     
+
+            // favProd();
+            return favProd();
+        }
+        // console.log(fav);
+        function change2(x) {
+            document.getElementById('ch' + x).style.display = "block";
+            document.getElementById('showch' + x).style.display = "none";
+            console.log(x);
+            // console.log(favs);
+            // favs.pop();
+
+            for (var i = 0; i < product.length; i++) {
+                if (product[i].tip == x) {
+                    console.log('hi');
+                    product.splice(i, 1);
+                    console.log(product);
+                    favProd();
+                }
+            }
+
+            // favProd();
+        }
+    </script>
+</body>
+
+</html>
+
+
+
+
+
+
+<!-- // function like(x){
+    //     console.log(x);
+    //     document.getElementById(x).innerHTML = '<span class="glyphicon glyphicon-heart" ></span>';
+    //     console.log(a);
+    // }
+    // like('lik3')
+    // document.getElementById('lk1').innerHTML = 'hi'; -->
+
+<!-- function change(x){
+        document.getElementById('ch'+x).style.display = "none";
+        document.getElementById('showch'+x).style.display = "block";
+        fruitArray();
+        // var items = '';
+                            
+        // var l0 = "<ol class='list-group'>";
+        // var l2 = "</ol>";
+        
+        // items += l0;
+        
+        // for (var i = 0; i < product.length; i++) {
+        //     var l1 = "<li class='list-group-item'>"+product[i].Name+"</li>";
+        //     items += l1;
+        // }
+        // items += l2;
+        
+        // document.getElementById('print').innerHTML = items;
+    } -->
+
+<!-- // str += '<div id="lik'+(i+1)+'" onclick=like('+"'"+(product[i].tip)+"'"+')><span class="glyphicon glyphicon-heart-empty"></span></div>'; -->

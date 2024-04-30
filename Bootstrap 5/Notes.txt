@@ -1,0 +1,22 @@
+Display  Screens
+xs <576px
+sm >= 576px
+md >= 768px
+lg >= 992px
+xl >= 1200px
+xxl >= 1400px
+
+container
+.container width covered with some spaces from both sides
+.container-sm for tabs
+.container-md for tablets
+.container-lg for laptops having screens less than 14.5
+.container-xl for laptops having screens more than 14.5
+.container-xxl for laptops having screen more than 16
+
+Grid System
+.container
+    .row
+        .col auto adjust width
+        .col-1/2/3/4/5/6/7/8/9/10/12 predefined width always remain same as defined
+        .col-lg-6/col-sm-6/col-md-6

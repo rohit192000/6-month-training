@@ -1,0 +1,55 @@
+body,html{
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+}
+div>p.ait{
+    font-size: 46px;
+    font-family: arial;
+    margin: 0px;
+    padding: 0px;
+    color: #ffa500;
+    font-weight: bolder;
+    position: relative;
+    left: 66px;
+    top: 50.4px;
+}
+nav.af{
+    padding: 0px;
+    margin: 0px;
+}
+nav>ul{
+    list-style-type: none;
+    position: relative;
+    left: 676.5px;
+    top: 8px;
+    font-style: normal;
+}
+nav>ul>li{
+    display: inline;
+    justify-content: end;
+    padding: 4px 10px 0px 10px;
+}
+nav>ul>li>a{
+    font-size: 18px;
+    text-decoration: none;
+}
+.er{
+    height: 1px;
+    width: 100%;
+    /* background: red; */
+    position: relative;
+    bottom : 13px;
+}
+div.ah{
+    height: 600px;
+    background-image: url("../images/AIT1.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 1400px 700px;
+}
+
+li:hover{
+    background: coral;
+}
+

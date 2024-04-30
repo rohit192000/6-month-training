@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slideUp slideDown slideToggle</title>
+    <script src="jquery.min.js"></script>
+    <style>
+        .ab{
+            height: 100px;
+            width: 100px;
+            background: red;
+        }
+        .ac{
+			height: 100px;
+			width: 100px;
+			background-color: blue;
+		}
+    </style>
+</head>
+<body>
+    <button id="btn1">Animate</button>
+    <button id="btn2">color blue</button>
+    <button id="btn3">Class Remove</button>
+    <button id="btn4">Add Class</button>
+    <button id="btn5">Class Toggle</button>
+    <div class="ab" id="ab"></div>
+    <script>
+        $(document).ready(function(){
+            $('#btn1').click(function(){
+                $('#ab').animate({
+                    marginLeft: '50%',
+                });
+            })
+            $('#btn2').click(function(){
+                $('#ab').css({
+                    'background-color': 'blue',
+                });
+            })
+            $('#btn3').click(function(){
+                $('#ab').removeClass('ab');
+            })
+            $('#btn4').click(function(){
+                $('#ab').addClass('ac');
+            })
+            $('#btn5').click(function(){
+                $('#ab').toggleClass('ab');
+            })
+        })
+
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

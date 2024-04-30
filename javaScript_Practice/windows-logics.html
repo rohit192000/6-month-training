@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/css/bootstrap.min.css">
+    <script src="styles/js/jquery.js"></script>
+    <script src="styles/js/bootstrap.min.js"></script>
+    <title>Window Function Logics Dom Structure</title>
+</head>
+<body>
+    <button data-toggle="modal" data-target="#mymodal" class="btn btn-success pull-right">
+        Login
+    </button>
+
+
+    <div class="modal fade" id="mymodal" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button data-dismiss="modal" class="close">x</button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="form-group">
+                                <input type="email" id="email" class="form-control" placeholder="Email"  >
+                            </div>
+                            <div class="form-group">
+                                <input type="password" id="password" class="form-control" placeholder="Password">
+                            </div>
+                            <div class="form-group">
+                                <button class="btn btn-success" onclick="login()">Login</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <script type="text/javascript">
+		
+		var users = [{Name:'Naveen', Email:'naveen@gmail.com', Password:'123456'},
+        {Name:'Raju', Email:'raju@gmail.com', Password:'123456'},
+        {Name:'Ravi', Email:'ravi@gmail.com', Password:'123456'}];
+
+        function login(){
+            var email = document.getElementById('email');
+            var password = document.getElementById('password');
+            if(email.value == ''){
+                alert('Please fill email');
+                email.focus();
+            }else if(password.value == ''){
+                alert('Fill the correct password');
+                password.focus();
+            }else {
+                for (var i = 0; i < users.length; i++){
+                    if(email.value == users[i].Email && password.value == users[i].Password){
+                        alert('login success');
+                        window.location.href = '../javascript_task/Extra.html';
+                        // location.reload();
+                        break;
+                    }
+                    if(users.length == (i+1)){
+                        {
+                            alert('Please fill the correct email and password');
+                        }
+                    }
+                }
+            }
+        }
+	</script>
+</body>
+</html>

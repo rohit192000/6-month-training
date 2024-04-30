@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./bootstrap-5.1.3-dist/css/bootstrap.min.css">
+    <script src="bootstrap-5.1.3-dist/js/bootstrap.min.js"></script>
+    <title>Document</title>
+    <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (function () {
+            'use strict'
+
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.querySelectorAll('.needs-validation')
+
+            // Loop over them and prevent submission
+            Array.prototype.slice.call(forms)
+                .forEach(function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (!form.checkValidity()) {
+                            event.preventDefault()
+                            event.stopPropagation()
+                        }
+
+                        form.classList.add('was-validated')
+                    }, false)
+                })
+        })()
+    </script>
+
+</head>
+
+<body>
+    <div class="container-sm">
+        100% wide until small breakpoint
+    </div>
+    <div class="container-md">
+        100% wide until medium breakpoint
+    </div>
+    <div class="container-lg">
+        100% wide until large breakpoint
+    </div>
+    <div class="container-xl">
+        100% wide until extra large breakpoint
+    </div>
+    <div class="container-xxl">
+        100% wide until extra extra large breakpoint
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col" style="background-color: red;">Column1</div>
+            <div class="col" style="background-color: green;">Column2</div>
+            <div class="col" style="background-color: blue;">Column3</div>
+            <div class="col" style="background-color: black;">Column5</div>
+            <div class="col" style="background-color: cyan;">Column6</div>
+            <div class="col" style="background-color: black;">Column7</div>
+            <div class="col" style="background-color: pink;">Column8</div>
+            <div class="col" style="background-color: black;">Column9</div>
+            <div class="col" style="background-color: black;">Column10</div>
+            <div class="col" style="background-color: grey;">Column11</div>
+            <div class="col" style="background-color: black;">Column12</div>
+            <div class="col" style="background-color: white;">Column4</div>
+            <div class="col" style="background-color: black;">Column4</div>
+            <div class="col" style="background-color: white;">Column4</div>
+            <div class="col" style="background-color: black;">Column4</div>
+            <div class="col" style="background-color: white;">Column4</div>
+        </div>
+    </div>
+    <div class="container-fluid"></div>
+    <div class="container"></div>
+    <div class="container-sm"></div>
+    <div class="container-md"></div>
+    <div class="container-lg"></div>
+    <div class="container-xl"></div>
+    <div class="container-xxl"></div>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col">Rohit</div>
+            <div class="col">Aakash</div>
+            <div class="col">Ashmeet</div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                1 of 2
+            </div>
+            <div class="col">
+                2 of 2
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                1 of 3
+            </div>
+            <div class="col">
+                2 of 3
+            </div>
+            <div class="col">
+                3 of 3
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">1 0f 2</div>
+            <div class="col-3">2 of 2</div>
+        </div>
+        <div class="row">
+            <div class="col">1 0f 2</div>
+            <div class="col-5">2 0f 2</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">Rohit</div>
+            <div class="col-md-auto">Corrupti cumque quidem cupiditate, autem aut alias? Illo earum dolores voluptatibus
+                aspernatur id, perspiciatis mollitia laboriosam natus repudiandae ex, reprehenderit quae repellendus.
+            </div>
+            <div class="col-md-auto" style="background-color: red;">Right</div>
+            <div class="col" style="background-color: red;">Right</div>
+            <div class="col col-lg-8" style="background-color: red;">Right</div>
+            <div class="col col-lg-6" style="background-color: red;">Right</div>
+            <div class="col col-sm-10" style="background-color: red;">Right</div>
+            <div class="col col-6" style="background-color: red;">Right</div>
+            <div class="row">
+                <div class="col-sm" style="background-color: red;">Right</div>
+                <div class="col-sm" style="background-color: red;">Right</div>
+                <div class="col-sm" style="background-color: red;">Right</div>
+                <!-- <div class="col-sm" style="background-color: red;">Right</div> -->
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Stack the columns on mobile by making one full-width and the other half-width -->
+        <div class="row">
+            <div class="col-md-8" style="background-color: green;">.col-md-8</div>
+            <div class="col-6 col-md-4" style="background-color: red;">.col-6 .col-md-4</div>
+        </div>
+
+        <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
+        <div class="row">
+            <div class="col-6 col-md-4" style="background-color: blue;">.col-6 .col-md-4</div>
+            <div class="col-6 col-md-4" style="background-color: purple;">.col-6 .col-md-4</div>
+            <div class="col-6 col-md-4" style="background-color: green;">.col-6 .col-md-4</div>
+        </div>
+
+        <!-- Columns are always 50% wide, on mobile and desktop -->
+        <div class="row">
+            <div class="col-6" style="background-color: grey;">.col-6</div>
+            <div class="col-6" style="background-color: pink;">.col-6</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row row-cols-1 row-cols-xs-4 row-cols-sm-3 row-cols-md-2">
+            <div class="col">Red is the color of love</div>
+            <div class="col">Red is the color of love</div>
+            <div class="col">Red is the color of love</div>
+            <div class="col">Red is the color of love</div>
+            <div class="col">Red is the color of love</div>
+            <div class="col">Red is the color of love</div>
+            <div class="col">Red is the color of love</div>
+            <div class="col">Red is the color of love</div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row align-items-start" style="height:100px; background-color: red;">
+            <div class="col">Hello</div>
+            <div class="col">Hello</div>
+            <div class="col">Hello</div>
+        </div>
+        <div class="row align-items-center" style="height:100px; background-color: green;">
+            <div class="col">Hello</div>
+            <div class="col">Hello</div>
+            <div class="col">Hello</div>
+        </div>
+        <div class="row align-items-end" style="height:100px; background-color: blue;">
+            <div class="col">Hello</div>
+            <div class="col">Hello</div>
+            <div class="col">Hello</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row" style="height:100px; background-color: grey;">
+            <div class="col align-self-start">
+                hello
+            </div>
+            <div class="col align-self-center">
+                hello
+            </div>
+            <div class="col align-self-end">
+                hello
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="row bg-dark" style="height: 100px;">
+            <div class="col-4 bg-light align-self-center">
+                .row.justify-content-start
+            </div>
+            <div class="col-4 bg-info align-self-center">
+                .row.justify-content-start
+            </div>
+        </div>
+        <div class="row justify-content-center bg-warning" style="height: 100px;">
+            <div class="col-4 bg-info align-self-center">
+                .row.justify-content-center
+            </div>
+            <div class="col-4 bg-light align-self-start">
+                .row.justify-content-center
+            </div>
+        </div>
+        <div class="row justify-content-end bg-danger " style="height: 100px;">
+            <div class="col-4 bg-light align-self-center">
+                .row.justify-content-end
+            </div>
+            <div class="col-4 bg-info align-self-start">
+                .row.justify-content-end
+            </div>
+        </div>
+        <div class="row justify-content-around bg-warning" style="height: 100px;">
+            <div class="row">
+                <div class="col-4 bg-info align-self-end">
+                    .row.justify-content-around
+                </div>
+                <div class="col-4 bg-primary bg-gradient align-self-center">
+                    .row.justify-content-around
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-between bg-dark" style="height: 100px;">
+            <div class="col-4 bg-light align-self-center">
+                .row.justify-content-between
+            </div>
+            <div class="col-4 bg-info align-self-start">
+                .row.justify-content-between
+            </div>
+        </div>
+        <div class="row justify-content-evenly bg-warning" style="height: 100px;">
+            <div class="col-4 bg-info align-self-start">
+                .row.justify-content-evenly
+            </div>
+            <div class="col-4 bg-light align-self-center">
+                .row.justify-content-evenly
+            </div>
+        </div>
+    </div>
+    <!-- <div class="col-12" style="height: 100px;"></div> -->
+    <div class="w-100">&nbsp;</div>
+    <div class="container">
+        <div class="row align-items-end" style="background-color: rgb(133, 102, 102); height: 100px;">
+            <div class="col align-self-start offset-lg-4 bg-dark">
+                Col 1
+            </div>
+            <div class="col align-self-center offset-lg-5 bg-primary">
+                Col 2
+            </div>
+            <div class="col align-slef-end bg-light">
+                Col 3
+            </div>
+            <div class="col align-self-center bg-secondary">
+                Col 4
+            </div>
+            <div class="col align-self-start offset-lg-3 bg-warning">
+                Col 5
+            </div>
+            <div class="col align-self-center bg-success">
+                Col 6
+            </div>
+            <div class="col bg-info order-5">
+                Col 7
+            </div>
+            <div class="col align-self-center bg-danger order-4">
+                Col 8
+            </div>
+        </div>
+    </div>
+    <div class="col-12" style="height: 100px;"></div>
+    <div class="container">
+        <div class="row align-items-end" style="height: 100px; background-color: pink;">
+            <div class="col align-self-center">
+                Col 1
+            </div>
+            <div class="col">
+                Col 2
+            </div>
+            <div class="col">
+                Col 3
+            </div>
+        </div>
+    </div>
+
+    <div class="row justify-content-evenly" style="height: 500px; background-color: purple;">
+        <div class="col-1 align-self-center" style="background-color: black;">
+            <p class="h1">h1</p>
+        </div>
+        <div class="col-1 align-self-center" style="background-color: red;">
+            <p class="h2">h2</p>
+        </div>
+        <div class="col-1 align-self-center" style="background-color: blue;">
+            <p class="h3">h3</p>
+        </div>
+        <div class="col-1 align-self-center">
+            <p class="h4">h4</p>
+        </div>
+        <div class="col-1 align-self-center">
+            <p class="h5">h5</p>
+        </div>
+        <div class="col-1 align-self-center" style="background-color: cyanaaa;">
+            <p class="h6">h6</p>
+        </div>
+    </div>
+
+    <div class="row justify-content-around g-3" style="background-color: hotpink;">
+        <div class="col-1 align-self-center order-5 " style="background-color: black;">
+            <p class="h1">h1</p>
+        </div>
+        <div class="col-1 align-self-center " style="background-color: red;">
+            <p class="h2">h2</p>
+        </div>
+        <div class="col-1 align-self-center" style="background-color: blue;">
+            <p class="h3">h3</p>
+        </div>
+        <div class="col-1 align-self-center">
+            <p class="h4">h4</p>
+        </div>
+        <div class="col-1 align-self-center">
+            <p class="h5">h5</p>
+        </div>
+        <div class="col-1 align-self-center order-1" style="background-color: cyan;">
+            <p class="h6">h6</p>
+        </div>
+    </div>
+
+    <div class="display-1">Display 1</div>
+    <div class="display-2">Display 2</div>
+    <div class="display-3">Display 3</div>
+    <div class="display-4">Display 4</div>
+    <div class="display-5">Display 5</div>
+    <div class="display-6">Display 6</div>
+
+    <p class="lead">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere, eveniet quas. Iusto quisquam
+        praesentium officia beatae quam quae autem, molestias consequuntur labore et voluptas architecto porro mollitia.
+        Cumque, sunt autem!</p>
+
+    <p><abbr title="HyperText Markup Language" class="initialism">HTML</abbr></p>
+    <div class="container-fluid bg-primary">
+        <div class="row justify-content-end">
+            <div class="col-2">
+                <ul class="list-inline">
+                    <li class="list-inline-item">Home</li>
+                    <li class="list-inline-item">Home</li>
+                    <li class="list-inline-item">Home</li>
+                    <li class="list-inline-item">Home</li>
+                    <li class="list-inline-item">Home</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <ul class="list-inline">
+        <li class="list-inline-item ">Home</li>
+        <li class="list-inline-item ">About</li>
+        <li class="list-inline-item ">Services</li>
+        <li class="list-inline-item">Menu</li>
+        <li class="list-inline-item">Login</li>
+    </ul>
+
+    <div class="container-fluid">
+        <div class="row row-cols-md-4 row-cols-sm-3  row-cols-2">
+            <div class="col">
+                <img src="./IMG_20220620_090926_790.jpg" class="img-fluid img-thumbnail" alt="My Photo" />
+            </div>
+            <div class="col">
+                <img src="./IMG_20220620_090926_790.jpg" class="img-fluid rounded mx-auto d-block" alt="My Photo" />
+            </div>
+            <div class="col">
+                <img src="./IMG_20220620_090926_790.jpg" class="img-fluid" alt="My Photo" />
+            </div>
+            <div class="col">
+                <img src="./IMG_20220620_090926_790.jpg" class="img-fluid" alt="My Photo" />
+            </div>
+            <div class="col">
+                <img src="./IMG_20220620_090926_790.jpg" class="img-fluid" alt="My Photo" />
+            </div>
+            <div class="col">
+                <img src="./IMG_20220620_090926_790.jpg" class="img-fluid" alt="My Photo" />
+            </div>
+            <div class="col">
+                <img src="./IMG_20220620_090926_790.jpg" class="img-fluid" alt="My Photo" />
+            </div>
+            <div class="col">
+                <img src="./IMG_20220620_090926_790.jpg" class="img-fluid" alt="My Photo" />
+            </div>
+        </div>
+    </div>
+    <!-- <img src="./IMG_20220620_090926_790.jpg" class="img-fluid rounded float-end" alt="My Photo"/> -->
+
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col">Column 1</div>
+            <div class="col">Column 2</div>
+            <div class="col">Column 3</div>
+            <div class="col">Column 4</div>
+            <div class="col">Column 5</div>
+            <div class="col">Column 6</div>
+            <div class="col">Column 7</div>
+            <div class="col">Column 8</div>
+        </div>
+        <div class="row">
+            <div class="col-2">
+                <img src="./IMG_20220620_090926_790.jpg" alt="my photo" class="img-thumbnail float-end">
+            </div>
+        </div>
+    </div>
+
+    <div class="table-responsive-sm">
+
+        <table class="table caption-top align-top table-bordered table-md table-hover border-info">
+            <caption>List of Students</caption>
+            <thead>
+                <tr>
+                    <th class="table-primary">Sr. No.</th>
+                    <th class="table-primary">Name</th>
+                    <th class="table-primary">Class</th>
+                    <th class="table-primary">Gender</th>
+                    <th class="table-primary">Roll No.</th>
+                    <th class="table-primary">Date OF Admisssion</th>
+                    <th class="table-primary">Branch</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th class="table-warning">1</th>
+                    <td class="table-warning">Rohit Samal</td>
+                    <td class="table-warning">10th</td>
+                    <td class="table-warning">Male</td>
+                    <td class="table-warning">1821062</td>
+                    <td class="table-warning">24/08/2018</td>
+                    <td class="table-warning">Information Technology</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <th class="table-warning">2</th>
+                    <td class="table-warning">Ashmeet Kaur</td>
+                    <td class="table-warning">11th</td>
+                    <td class="table-warning">Female</td>
+                    <td class="table-warning">1821045</td>
+                    <td class="table-warning">25/08/2018</td>
+                    <td class="table-warning">Computer Science Engineering</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <th class="table-warning">3</th>
+                    <td class="table-warning">Aakash Passi</td>
+                    <td class="table-warning">8th</td>
+                    <td class="table-warning">Male</td>
+                    <td class="table-warning">1821072</td>
+                    <td class="table-warning">26/08/2018</td>
+                    <td class="table-warning">Computer Science Engineering</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <th class="table-warning">4</th>
+                    <td class="table-warning">Sanjana Kalra</td>
+                    <td class="table-warning"></td>
+                    <td class="table-warning">Male</td>
+                    <td class="table-warning">1821062</td>
+                    <td class="table-warning">24/08/2018</td>
+                    <td class="table-warning">Information Technology</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <th class="table-warning">5</th>
+                    <td class="table-warning">Rohit Samal</td>
+                    <td class="table-warning">10th</td>
+                    <td class="table-warning">Male</td>
+                    <td class="table-warning">1821062</td>
+                    <td class="table-warning">24/08/2018</td>
+                    <td class="table-warning">Information Technology</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <th class="table-warning">6</th>
+                    <td class="table-warning">Rohit Samal</td>
+                    <td class="table-warning">10th</td>
+                    <td class="table-warning">Male</td>
+                    <td class="table-warning">1821062</td>
+                    <td class="table-warning">24/08/2018</td>
+                    <td class="table-warning">Information Technology</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <th class="table-warning">7</th>
+                    <td class="table-warning">Rohit Samal</td>
+                    <td class="table-warning">10th</td>
+                    <td class="table-warning">Male</td>
+                    <td class="table-warning">1821062</td>
+                    <td class="table-warning">24/08/2018</td>
+                    <td class="table-warning">Information Technology</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-md table-bordered table-warning border-info align-middle caption-top">
+            <caption>List Of Students</caption>
+            <thead>
+                <tr>
+                    <th rowspan="2">Sr. No.</th>
+                    <th rowspan="2">Name</th>
+                    <th rowspan="2">Class</th>
+                    <th rowspan="2">Roll No.</th>
+                    <th colspan="5">Subject</th>
+                </tr>
+                <tr>
+                    <th>English</th>
+                    <th>Hindi</th>
+                    <th>Punjabi</th>
+                    <th>Math</th>
+                    <th>Science</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Rohit Samal</td>
+                    <td>10<sup>th</sup></td>
+                    <td>1821062</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                    <td>No</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Rohit Samal</td>
+                    <td>10<sup>th</sup></td>
+                    <td>1821062</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                    <td>No</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Rohit Samal</td>
+                    <td>10<sup>th</sup></td>
+                    <td>1821062</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                    <td>No</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Rohit Samal</td>
+                    <td>10<sup>th</sup></td>
+                    <td>1821062</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                    <td>No</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-2">
+        <figure class="figure">
+            <img src="./IMG_20220620_090926_790.jpg" class="figure-img img-fluid img-rounded">
+            <figcaption class="figure-caption text-center">Fig 1. Rohit</figcaption>
+        </figure>
+    </div>
+
+    <div class="container">
+        <div class="mb-4 row">
+
+            <label for="mail" class="col-sm-2 col-form-label">
+                Email Address
+            </label>
+            <div class="col-sm-10">
+                <input type="email" class="form-control-sm" placeholder="email@gmail.com">
+            </div>
+        </div>
+        <div class="mb-4 row">
+            <label for="name" class="col-sm-2 col-form-label">
+                Name
+            </label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control-plaintext" value="Jazz Kaur" readonly>
+            </div>
+        </div>
+    </div>
+
+    <label for="exampleColorInput" class="form-label">Color picker</label>
+    <input type="color" class="form-control form-control-color" id="exampleColorInput" value="#563d7c"
+        title="Choose your color">
+
+    <div class="input-group input-group-sm">
+        <span class="input-group-text">@</span>
+        <input type="text" class="form-control" palceholder="UserName">
+    </div>
+
+    <!-- <form class="row g-3 needs-validation">
+        <div class="col-md-4">
+          <label for="validationCustom01" class="form-label">First name</label>
+          <input type="text" class="form-control" id="validationCustom01" value="Mark" required>
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+        </div>
+        <div class="col-md-4">
+          <label for="validationCustom02" class="form-label">Last name</label>
+          <input type="text" class="form-control" id="validationCustom02" value="Otto" required>
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+        </div>
+        <div class="col-md-4">
+          <label for="validationCustomUsername" class="form-label">Username</label>
+          <div class="input-group has-validation">
+            <span class="input-group-text" id="inputGroupPrepend">@</span>
+            <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+            <div class="invalid-feedback">
+              Please choose a username.
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <label for="validationCustom03" class="form-label">City</label>
+          <input type="text" class="form-control" id="validationCustom03" required>
+          <div class="invalid-feedback">
+            Please provide a valid city.
+          </div>
+        </div>
+        <div class="col-md-3">
+          <label for="validationCustom04" class="form-label">State</label>
+          <select class="form-select" id="validationCustom04" required>
+            <option selected disabled value="">Choose...</option>
+            <option>...</option>
+          </select>
+          <div class="invalid-feedback">
+            Please select a valid state.
+          </div>
+        </div>
+        <div class="col-md-3">
+          <label for="validationCustom05" class="form-label">Zip</label>
+          <input type="text" class="form-control" id="validationCustom05" required>
+          <div class="invalid-feedback">
+            Please provide a valid zip.
+          </div>
+        </div>
+        <div class="col-12">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+            <label class="form-check-label" for="invalidCheck">
+              Agree to terms and conditions
+            </label>
+            <div class="invalid-feedback">
+              You must agree before submitting.
+            </div>
+          </div>
+        </div>
+        <div class="col-12">
+          <button class="btn btn-primary" type="submit">Submit form</button>
+        </div>
+      </form> -->
+
+    <form class="row g-3 needs-validation" novalidate>
+        <div class="col-md-4">
+            <label for="validationCustom01" class="form-label">First name</label>
+            <input type="text" class="form-control" id="validationCustom01" value="Mark" required>
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+        </div>
+        <div class="col-md-4">
+            <label for="validationCustom02" class="form-label">Last name</label>
+            <input type="text" class="form-control" id="validationCustom02" value="Otto" required>
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+        </div>
+        <div class="col-md-4">
+            <label for="validationCustomUsername" class="form-label">Username</label>
+            <div class="input-group has-validation">
+                <span class="input-group-text" id="inputGroupPrepend">@</span>
+                <input type="text" class="form-control" id="validationCustomUsername"
+                    aria-describedby="inputGroupPrepend" required>
+                <div class="invalid-feedback">
+                    Please choose a username.
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <label for="validationCustom03" class="form-label">City</label>
+            <input type="text" class="form-control" id="validationCustom03" required>
+            <div class="invalid-feedback">
+                Please provide a valid city.
+            </div>
+        </div>
+        <div class="col-md-3">
+            <label for="validationCustom04" class="form-label">State</label>
+            <select class="form-select" id="validationCustom04" required>
+                <option selected disabled value="">Choose...</option>
+                <option>...</option>
+            </select>
+            <div class="invalid-feedback">
+                Please select a valid state.
+            </div>
+        </div>
+        <div class="col-md-3">
+            <label for="validationCustom05" class="form-label">Zip</label>
+            <input type="text" class="form-control" id="validationCustom05" required>
+            <div class="invalid-feedback">
+                Please provide a valid zip.
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                <label class="form-check-label" for="invalidCheck">
+                    Agree to terms and conditions
+                </label>
+                <div class="invalid-feedback">
+                    You must agree before submitting.
+                </div>
+            </div>
+        </div>
+        <div class="col-12">
+            <button class="btn btn-primary" type="submit">Submit form</button>
+        </div>
+    </form>
+    <div class="accordion">
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                    Accordion Item #1
+                </button>
+            </h2>
+            <div id="collapseOne" class="acordion-collapse collapse show" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <strong>This is the first item's accordion body.</strong>It is shown by default, until the collapse
+                    plugin adds the appropriate classes that we use to style each element. These classes control the
+                    overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of
+                    this with custom CSS or overriding our default variables. It's also worth noting that just about any
+                    HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                </div>
+            </div>
+        </div>
+        <div class="accordion accordion-flush">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                        type="button">
+                        Accordion Item #2
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        This is accordion two.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
